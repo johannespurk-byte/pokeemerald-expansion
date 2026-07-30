@@ -5951,9 +5951,43 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Poochyena
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Tinkatink (F) @ Oran Berry
+Ability: Mold Breaker
+EVs: 248 HP / 252 Atk / 8 SpD
+Adamant Nature
+Metal Claw
+Knock Off
+Stealth Rock
+Play Rough
+
+Spheal (M) @ Leftovers
+Ability: Thick Fat
+EVs: 252 HP / 4 SpA / 252 SpD
+Calm Nature
+IVs: 0 Atk
+Icy Wind
+Water Pulse
+Yawn
+Protect
+
+Diglett (M) @ Focus Sash
+Ability: Arena Trap
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Bulldoze
+Hone Claws
+Sucker Punch
+Rock Tomb
+
+Shroodle (M) @ Flying Gem
+Ability: Unburden
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+Trailblaze
+Poison Fang
+Acrobatics
+Swords Dance
+
 
 === TRAINER_BILLY ===
 Name: BILLY
@@ -9511,11 +9545,63 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
-Treecko
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Taillow (F) @ Flame Orb
+Ability: Guts
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Protect
+Wing Attack
+Quick Attack
+U-turn
+
+Pichu (F) @ Focus Sash
+Ability: Static
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+IVs: 0 Atk
+Thunder Shock
+Psybeam
+Draining Kiss
+Nasty Plot
+
+Chimchar (M) @ Passho Berry
+Ability: Iron Fist
+EVs: 248 HP / 252 Atk / 8 SpD
+Adamant Nature
+Mach Punch
+Flame Wheel
+Work Up
+Trailblaze
+
+Mudkip (M) @ Oran Berry
+Ability: Damp
+EVs: 248 HP / 8 Atk / 252 SpA
+Quiet Nature
+Water Pledge
+Icy Wind
+Mud Shot
+Aqua Jet
+
+Bulbasaur (F) @ Black Sludge
+Ability: Overgrow
+EVs: 252 HP / 4 SpA / 252 SpD
+Calm Nature
+IVs: 0 Atk
+Mega Drain
+Leech Seed
+Sleep Powder
+Mud Shot
+
+Stunky (M) @ Leftovers
+Ability: Aftermath
+EVs: 252 HP / 4 Atk / 252 Spe
+Naive Nature
+Toxic
+Protect
+Venoshock
+Bite
 
 === TRAINER_BRENDAN_ROUTE_110_MUDKIP ===
 Name: BRENDAN
@@ -9566,11 +9652,63 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move / Try To Faint / Force Setup First Turn
+AI: Smart Trainer
 
-Torchic
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Taillow (F) @ Flame Orb
+Ability: Guts
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Protect
+Wing Attack
+Quick Attack
+U-turn
+
+Pichu (F) @ Focus Sash
+Ability: Static
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+IVs: 0 Atk
+Thunder Shock
+Psybeam
+Draining Kiss
+Nasty Plot
+
+Chimchar (M) @ Passho Berry
+Ability: Iron Fist
+EVs: 248 HP / 252 Atk / 8 SpD
+Adamant Nature
+Mach Punch
+Flame Wheel
+Work Up
+Trailblaze
+
+Mudkip (M) @ Oran Berry
+Ability: Damp
+EVs: 248 HP / 8 Atk / 252 SpA
+Quiet Nature
+Water Pledge
+Icy Wind
+Mud Shot
+Aqua Jet
+
+Bulbasaur (F) @ Black Sludge
+Ability: Overgrow
+EVs: 252 HP / 4 SpA / 252 SpD
+Calm Nature
+IVs: 0 Atk
+Mega Drain
+Leech Seed
+Sleep Powder
+Mud Shot
+
+Stunky (M) @ Leftovers
+Ability: Aftermath
+EVs: 252 HP / 4 Atk / 252 Spe
+Naive Nature
+Toxic
+Protect
+Venoshock
+Bite
 
 === TRAINER_BRENDAN_ROUTE_110_TREECKO ===
 Name: BRENDAN
@@ -9621,11 +9759,63 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
-Mudkip
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Taillow (F) @ Flame Orb
+Ability: Guts
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Protect
+Wing Attack
+Quick Attack
+U-turn
+
+Pichu (F) @ Focus Sash
+Ability: Static
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+IVs: 0 Atk
+Thunder Shock
+Psybeam
+Draining Kiss
+Nasty Plot
+
+Chimchar (M) @ Passho Berry
+Ability: Iron Fist
+EVs: 248 HP / 252 Atk / 8 SpD
+Adamant Nature
+Mach Punch
+Flame Wheel
+Work Up
+Trailblaze
+
+Mudkip (M) @ Oran Berry
+Ability: Damp
+EVs: 248 HP / 8 Atk / 252 SpA
+Quiet Nature
+Water Pledge
+Icy Wind
+Mud Shot
+Aqua Jet
+
+Bulbasaur (F) @ Black Sludge
+Ability: Overgrow
+EVs: 252 HP / 4 SpA / 252 SpD
+Calm Nature
+IVs: 0 Atk
+Mega Drain
+Leech Seed
+Sleep Powder
+Mud Shot
+
+Stunky (M) @ Leftovers
+Ability: Aftermath
+EVs: 252 HP / 4 Atk / 252 Spe
+Naive Nature
+Toxic
+Protect
+Venoshock
+Bite
 
 === TRAINER_BRENDAN_ROUTE_110_TORCHIC ===
 Name: BRENDAN
@@ -9676,12 +9866,63 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
-Treecko
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Taillow (F) @ Flame Orb
+Ability: Guts
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Protect
+Wing Attack
+Quick Attack
+U-turn
 
+Pichu (F) @ Focus Sash
+Ability: Static
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+IVs: 0 Atk
+Thunder Shock
+Psybeam
+Draining Kiss
+Nasty Plot
+
+Chimchar (M) @ Passho Berry
+Ability: Iron Fist
+EVs: 248 HP / 252 Atk / 8 SpD
+Adamant Nature
+Mach Punch
+Flame Wheel
+Work Up
+Trailblaze
+
+Mudkip (M) @ Oran Berry
+Ability: Damp
+EVs: 248 HP / 8 Atk / 252 SpA
+Quiet Nature
+Water Pledge
+Icy Wind
+Mud Shot
+Aqua Jet
+
+Bulbasaur (F) @ Black Sludge
+Ability: Overgrow
+EVs: 252 HP / 4 SpA / 252 SpD
+Calm Nature
+IVs: 0 Atk
+Mega Drain
+Leech Seed
+Sleep Powder
+Mud Shot
+
+Stunky (M) @ Leftovers
+Ability: Aftermath
+EVs: 252 HP / 4 Atk / 252 Spe
+Naive Nature
+Toxic
+Protect
+Venoshock
+Bite
 === TRAINER_MAY_ROUTE_110_MUDKIP ===
 Name: MAY
 Class: Rival
@@ -9731,12 +9972,63 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
-Torchic
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Taillow (F) @ Flame Orb
+Ability: Guts
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Protect
+Wing Attack
+Quick Attack
+U-turn
 
+Pichu (F) @ Focus Sash
+Ability: Static
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+IVs: 0 Atk
+Thunder Shock
+Psybeam
+Draining Kiss
+Nasty Plot
+
+Chimchar (M) @ Passho Berry
+Ability: Iron Fist
+EVs: 248 HP / 252 Atk / 8 SpD
+Adamant Nature
+Mach Punch
+Flame Wheel
+Work Up
+Trailblaze
+
+Mudkip (M) @ Oran Berry
+Ability: Damp
+EVs: 248 HP / 8 Atk / 252 SpA
+Quiet Nature
+Water Pledge
+Icy Wind
+Mud Shot
+Aqua Jet
+
+Bulbasaur (F) @ Black Sludge
+Ability: Overgrow
+EVs: 252 HP / 4 SpA / 252 SpD
+Calm Nature
+IVs: 0 Atk
+Mega Drain
+Leech Seed
+Sleep Powder
+Mud Shot
+
+Stunky (M) @ Leftovers
+Ability: Aftermath
+EVs: 252 HP / 4 Atk / 252 Spe
+Naive Nature
+Toxic
+Protect
+Venoshock
+Bite
 === TRAINER_MAY_ROUTE_110_TREECKO ===
 Name: MAY
 Class: Rival
@@ -9786,11 +10078,63 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
-Mudkip
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Taillow (F) @ Flame Orb
+Ability: Guts
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Protect
+Wing Attack
+Quick Attack
+U-turn
+
+Pichu (F) @ Focus Sash
+Ability: Static
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+IVs: 0 Atk
+Thunder Shock
+Psybeam
+Draining Kiss
+Nasty Plot
+
+Chimchar (M) @ Passho Berry
+Ability: Iron Fist
+EVs: 248 HP / 252 Atk / 8 SpD
+Adamant Nature
+Mach Punch
+Flame Wheel
+Work Up
+Trailblaze
+
+Mudkip (M) @ Oran Berry
+Ability: Damp
+EVs: 248 HP / 8 Atk / 252 SpA
+Quiet Nature
+Water Pledge
+Icy Wind
+Mud Shot
+Aqua Jet
+
+Bulbasaur (F) @ Black Sludge
+Ability: Overgrow
+EVs: 252 HP / 4 SpA / 252 SpD
+Calm Nature
+IVs: 0 Atk
+Mega Drain
+Leech Seed
+Sleep Powder
+Mud Shot
+
+Stunky (M) @ Leftovers
+Ability: Aftermath
+EVs: 252 HP / 4 Atk / 252 Spe
+Naive Nature
+Toxic
+Protect
+Venoshock
+Bite
 
 === TRAINER_MAY_ROUTE_110_TORCHIC ===
 Name: MAY
@@ -16854,26 +17198,174 @@ Bulbasaur
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_BRENDAN_PLACEHOLDER ===
-Name: BRENDAN
-Class: RS Protag
-Pic: RS Brendan
-Gender: Male
-Music: Male
-Double Battle: No
+=== TRAINER_GRUNT_MAGMACAMP_1 ===
+Name: Gamma
+Class: Team Magma
+Pic: Magma Grunt M
+Music: Magma
+AI: Smart Trainer
 
-Groudon
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Mime Jr. (F) @ Light Clay
+Ability: Technician
+EVs: 252 HP / 4 Atk / 252 SpD
+Sassy Nature
+Fake Out
+Confusion
+Light Screen
+Reflect
 
-=== TRAINER_MAY_PLACEHOLDER ===
-Name: MAY
-Class: RS Protag
-Pic: RS May
+Pansear (M) @ Air Balloon
+Ability: Blaze
+EVs: 248 HP / 8 Atk / 252 SpD
+Sassy Nature
+Ember
+Protect
+Helping Hand
+Bite
+
+Litleo (F) @ Wise Glasses
+Ability: Unnerve
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+IVs: 0 Atk
+Ember
+Protect
+Work Up
+Echoed Voice
+
+=== TRAINER_GRUNT_MAGMACAMP_2 ===
+Name: Alpha
+Class: Team Magma
+Pic: Magma Grunt M
+Music: Magma
+AI: Smart Trainer
+
+Sandile (M) @ Assault Vest
+Ability: Intimidate
+EVs: 248 HP / 252 Atk / 8 SpD
+Adamant Nature
+Bite
+Sand Tomb
+Rock Tomb
+Fire Fang
+
+Cubone (M) @ Thick Club
+Ability: Battle Armor
+EVs: 248 HP / 252 Atk / 8 SpD
+Adamant Nature
+Detect
+Rock Tomb
+Aerial Ace
+Bulldoze
+
+Baltoy @ Leftovers
+Ability: Levitate
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+IVs: 0 Atk
+Calm Mind
+Confusion
+Mud Shot
+Ancient Power
+Cleffa (F) @ Eviolite
+Ability: Magic Guard
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+IVs: 0 Atk
+Calm Mind
+Draining Kiss
+Confusion
+Shock Wave
+
+Slowpoke (F) @ Leftovers
+Ability: Regenerator
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+Flip Turn
+Psybeam
+Water Pulse
+Yawn
+
+Inkay (M) @ Assault Vest
+Ability: Contrary
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+Psycho Cut
+Payback
+Aerial Ace
+Aqua Jet
+
+=== TRAINER_GANDALF ===
+Name: Gandalf
+Class: Hex Maniac
+Pic: Hex Maniac
 Gender: Female
-Music: Male
-Double Battle: No
+Music: Suspicious
+AI: Smart Trainer      
 
-Kyogre
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Cleffa (F) @ Eviolite
+Ability: Magic Guard
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+IVs: 0 Atk
+Calm Mind
+Draining Kiss
+Confusion
+Shock Wave
+
+Slowpoke (F) @ Leftovers
+Ability: Regenerator
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+Flip Turn
+Psybeam
+Water Pulse
+Yawn
+
+Inkay (M) @ Assault Vest
+Ability: Contrary
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+Psycho Cut
+Payback
+Aerial Ace
+Aqua Jet
+
+
+
+
+=== TRAINER_GERD ===
+Name: Gerd
+Class: Gentleman
+Pic: Gentleman
+Gender: Male
+Music: Rich
+AI: Smart Trainer      
+
+Meowth (M) @ Normal Gem
+Ability: Technician
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Fake Out
+Pay Day
+Bite
+Aerial Ace
+
+Meowth-Alola (M) @ Black Glasses
+Ability: Technician
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+IVs: 0 Atk
+Nasty Plot
+Snarl
+Round
+Mud-Slap
+
+Meowth-Galar (M) @ Muscle Band
+Ability: Tough Claws
+EVs: 248 HP / 252 Atk / 8 SpD
+Adamant Nature
+Metal Claw
+Power-Up Punch
+Bullet Punch
+Bulldoze

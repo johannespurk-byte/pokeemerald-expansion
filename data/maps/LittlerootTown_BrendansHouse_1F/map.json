@@ -3,7 +3,6 @@
   "name": "LittlerootTown_BrendansHouse_1F",
   "layout": "LAYOUT_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F",
   "music": "MUS_LITTLEROOT",
-  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -17,7 +16,7 @@
   "object_events": [
     {
       "local_id": "LOCALID_PLAYERS_HOUSE_1F_MOM",
-      "graphics_id": "OBJ_EVENT_GFX_MOM",
+      "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN",
       "x": 2,
       "y": 6,
       "elevation": 3,
@@ -172,5 +171,6 @@
       "script": "LittlerootTown_BrendansHouse_1F_EventScript_MeetRival2"
     }
   ],
-  "bg_events": []
+  "bg_events": [],
+  "region": "REGION_HOENN"
 }

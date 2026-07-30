@@ -1,0 +1,40 @@
+Mamor_Cace_MapScripts::
+	.byte 0
+
+Mamor_Cace_EventScript_Gerd::
+	trainerbattle_single TRAINER_GERD, Mamor_Cace_Text_GerdIntro, Mamor_Cace_Text_GerdDefeated
+	msgbox Mamor_Cace_Text_GerdPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Mamor_Cace_Text_GerdIntro:
+	.string "If you have POKeMON with you, then\n"
+	.string "you're an official POKeMON TRAINER!\l"
+	.string "You can't say no to my challenge!$"
+
+Mamor_Cace_Text_GerdDefeated:
+	.string "Arrgh, I lost"
+	.string "I should have trained mine more$"
+
+Mamor_Cace_Text_GerdPostBattle:
+	.string "Listen, you. If you're strong,\n"
+	.string "you should have told me before!$"
+
+Mamor_Cace_EventScript_Gandalf::
+	trainerbattle_single TRAINER_GANDALF, Mamor_Cace_Text_GandalfIntro, Mamor_Cace_Text_GandalfDefeated
+	msgbox Mamor_Cace_Text_GandalfPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+	Mamor_Cace_Text_GandalfIntro:
+	.string "I am Gandalf, the wizard of\n"
+	.string "Middle Earth! I will not let you\n"
+	.string "pass without a battle!$"
+
+	Mamor_Cace_Text_GandalfDefeated:
+	.string "You have bested me, young trainer.\n"
+	.string "I will let you pass, but beware\n"
+	.string "of the dangers that lie ahead.$"
+
+	Mamor_Cace_Text_GandalfPostBattle:
+	.string "You have proven yourself to be a\n"
+	.string "worthy trainer. May your journey\n"
+	.string "be filled with adventure and\n

@@ -9551,57 +9551,57 @@ Taillow (F) @ Flame Orb
 Ability: Guts
 EVs: 4 HP / 252 Atk / 252 Spe
 Jolly Nature
-Protect
-Wing Attack
-Quick Attack
-U-turn
+- Protect
+- Wing Attack
+- Quick Attack
+- U-turn
 
 Pichu (F) @ Focus Sash
 Ability: Static
 EVs: 252 SpA / 4 SpD / 252 Spe
 Timid Nature
 IVs: 0 Atk
-Thunder Shock
-Psybeam
-Draining Kiss
-Nasty Plot
+- Thunder Shock
+- Psybeam
+- Draining Kiss
+- Nasty Plot
 
 Chimchar (M) @ Passho Berry
 Ability: Iron Fist
 EVs: 248 HP / 252 Atk / 8 SpD
 Adamant Nature
-Mach Punch
-Flame Wheel
-Work Up
-Trailblaze
+- Mach Punch
+- Flame Wheel
+- Work Up
+- Trailblaze
 
 Mudkip (M) @ Oran Berry
 Ability: Damp
 EVs: 248 HP / 8 Atk / 252 SpA
 Quiet Nature
-Water Pledge
-Icy Wind
-Mud Shot
-Aqua Jet
+- Water Pledge
+- Icy Wind
+- Mud Shot
+- Aqua Jet
 
 Bulbasaur (F) @ Black Sludge
 Ability: Overgrow
 EVs: 252 HP / 4 SpA / 252 SpD
 Calm Nature
 IVs: 0 Atk
-Mega Drain
-Leech Seed
-Sleep Powder
-Mud Shot
+- Mega Drain
+- Leech Seed
+- Sleep Powder
+- Mud Shot
 
 Stunky (M) @ Leftovers
 Ability: Aftermath
 EVs: 252 HP / 4 Atk / 252 Spe
 Naive Nature
-Toxic
-Protect
-Venoshock
-Bite
+- Toxic
+- Protect
+- Venoshock
+- Bite
 
 === TRAINER_BRENDAN_ROUTE_110_MUDKIP ===
 Name: BRENDAN
@@ -9658,57 +9658,57 @@ Taillow (F) @ Flame Orb
 Ability: Guts
 EVs: 4 HP / 252 Atk / 252 Spe
 Jolly Nature
-Protect
-Wing Attack
-Quick Attack
-U-turn
+- Protect
+- Wing Attack
+- Quick Attack
+- U-turn
 
 Pichu (F) @ Focus Sash
 Ability: Static
 EVs: 252 SpA / 4 SpD / 252 Spe
 Timid Nature
 IVs: 0 Atk
-Thunder Shock
-Psybeam
-Draining Kiss
-Nasty Plot
+- Thunder Shock
+- Psybeam
+- Draining Kiss
+- Nasty Plot
 
 Chimchar (M) @ Passho Berry
 Ability: Iron Fist
 EVs: 248 HP / 252 Atk / 8 SpD
 Adamant Nature
-Mach Punch
-Flame Wheel
-Work Up
-Trailblaze
+- Mach Punch
+- Flame Wheel
+- Work Up
+- Trailblaze
 
 Mudkip (M) @ Oran Berry
 Ability: Damp
 EVs: 248 HP / 8 Atk / 252 SpA
 Quiet Nature
-Water Pledge
-Icy Wind
-Mud Shot
-Aqua Jet
+- Water Pledge
+- Icy Wind
+- Mud Shot
+- Aqua Jet
 
 Bulbasaur (F) @ Black Sludge
 Ability: Overgrow
 EVs: 252 HP / 4 SpA / 252 SpD
 Calm Nature
 IVs: 0 Atk
-Mega Drain
-Leech Seed
-Sleep Powder
-Mud Shot
+- Mega Drain
+- Leech Seed
+- Sleep Powder
+- Mud Shot
 
 Stunky (M) @ Leftovers
 Ability: Aftermath
 EVs: 252 HP / 4 Atk / 252 Spe
 Naive Nature
-Toxic
-Protect
-Venoshock
-Bite
+- Toxic
+- Protect
+- Venoshock
+- Bite
 
 === TRAINER_BRENDAN_ROUTE_110_TREECKO ===
 Name: BRENDAN
@@ -9765,57 +9765,57 @@ Taillow (F) @ Flame Orb
 Ability: Guts
 EVs: 4 HP / 252 Atk / 252 Spe
 Jolly Nature
-Protect
-Wing Attack
-Quick Attack
-U-turn
+- Protect
+- Wing Attack
+- Quick Attack
+- U-turn
 
 Pichu (F) @ Focus Sash
 Ability: Static
 EVs: 252 SpA / 4 SpD / 252 Spe
 Timid Nature
 IVs: 0 Atk
-Thunder Shock
-Psybeam
-Draining Kiss
-Nasty Plot
+- Thunder Shock
+- Psybeam
+- Draining Kiss
+- Nasty Plot
 
 Chimchar (M) @ Passho Berry
 Ability: Iron Fist
 EVs: 248 HP / 252 Atk / 8 SpD
 Adamant Nature
-Mach Punch
-Flame Wheel
-Work Up
-Trailblaze
+- Mach Punch
+- Flame Wheel
+- Work Up
+- Trailblaze
 
 Mudkip (M) @ Oran Berry
 Ability: Damp
 EVs: 248 HP / 8 Atk / 252 SpA
 Quiet Nature
-Water Pledge
-Icy Wind
-Mud Shot
-Aqua Jet
+- Water Pledge
+- Icy Wind
+- Mud Shot
+- Aqua Jet
 
 Bulbasaur (F) @ Black Sludge
 Ability: Overgrow
 EVs: 252 HP / 4 SpA / 252 SpD
 Calm Nature
 IVs: 0 Atk
-Mega Drain
-Leech Seed
-Sleep Powder
-Mud Shot
+- Mega Drain
+- Leech Seed
+- Sleep Powder
+- Mud Shot
 
 Stunky (M) @ Leftovers
 Ability: Aftermath
 EVs: 252 HP / 4 Atk / 252 Spe
 Naive Nature
-Toxic
-Protect
-Venoshock
-Bite
+- Toxic
+- Protect
+- Venoshock
+- Bite
 
 === TRAINER_BRENDAN_ROUTE_110_TORCHIC ===
 Name: BRENDAN
@@ -9872,57 +9872,58 @@ Taillow (F) @ Flame Orb
 Ability: Guts
 EVs: 4 HP / 252 Atk / 252 Spe
 Jolly Nature
-Protect
-Wing Attack
-Quick Attack
-U-turn
+- Protect
+- Wing Attack
+- Quick Attack
+- U-turn
 
 Pichu (F) @ Focus Sash
 Ability: Static
 EVs: 252 SpA / 4 SpD / 252 Spe
 Timid Nature
 IVs: 0 Atk
-Thunder Shock
-Psybeam
-Draining Kiss
-Nasty Plot
+- Thunder Shock
+- Psybeam
+- Draining Kiss
+- Nasty Plot
 
 Chimchar (M) @ Passho Berry
 Ability: Iron Fist
 EVs: 248 HP / 252 Atk / 8 SpD
 Adamant Nature
-Mach Punch
-Flame Wheel
-Work Up
-Trailblaze
+- Mach Punch
+- Flame Wheel
+- Work Up
+- Trailblaze
 
 Mudkip (M) @ Oran Berry
 Ability: Damp
 EVs: 248 HP / 8 Atk / 252 SpA
 Quiet Nature
-Water Pledge
-Icy Wind
-Mud Shot
-Aqua Jet
+- Water Pledge
+- Icy Wind
+- Mud Shot
+- Aqua Jet
 
 Bulbasaur (F) @ Black Sludge
 Ability: Overgrow
 EVs: 252 HP / 4 SpA / 252 SpD
 Calm Nature
 IVs: 0 Atk
-Mega Drain
-Leech Seed
-Sleep Powder
-Mud Shot
+- Mega Drain
+- Leech Seed
+- Sleep Powder
+- Mud Shot
 
 Stunky (M) @ Leftovers
 Ability: Aftermath
 EVs: 252 HP / 4 Atk / 252 Spe
 Naive Nature
-Toxic
-Protect
-Venoshock
-Bite
+- Toxic
+- Protect
+- Venoshock
+- Bite
+
 === TRAINER_MAY_ROUTE_110_MUDKIP ===
 Name: MAY
 Class: Rival
@@ -9978,57 +9979,58 @@ Taillow (F) @ Flame Orb
 Ability: Guts
 EVs: 4 HP / 252 Atk / 252 Spe
 Jolly Nature
-Protect
-Wing Attack
-Quick Attack
-U-turn
+- Protect
+- Wing Attack
+- Quick Attack
+- U-turn
 
 Pichu (F) @ Focus Sash
 Ability: Static
 EVs: 252 SpA / 4 SpD / 252 Spe
 Timid Nature
 IVs: 0 Atk
-Thunder Shock
-Psybeam
-Draining Kiss
-Nasty Plot
+- Thunder Shock
+- Psybeam
+- Draining Kiss
+- Nasty Plot
 
 Chimchar (M) @ Passho Berry
 Ability: Iron Fist
 EVs: 248 HP / 252 Atk / 8 SpD
 Adamant Nature
-Mach Punch
-Flame Wheel
-Work Up
-Trailblaze
+- Mach Punch
+- Flame Wheel
+- Work Up
+- Trailblaze
 
 Mudkip (M) @ Oran Berry
 Ability: Damp
 EVs: 248 HP / 8 Atk / 252 SpA
 Quiet Nature
-Water Pledge
-Icy Wind
-Mud Shot
-Aqua Jet
+- Water Pledge
+- Icy Wind
+- Mud Shot
+- Aqua Jet
 
 Bulbasaur (F) @ Black Sludge
 Ability: Overgrow
 EVs: 252 HP / 4 SpA / 252 SpD
 Calm Nature
 IVs: 0 Atk
-Mega Drain
-Leech Seed
-Sleep Powder
-Mud Shot
+- Mega Drain
+- Leech Seed
+- Sleep Powder
+- Mud Shot
 
 Stunky (M) @ Leftovers
 Ability: Aftermath
 EVs: 252 HP / 4 Atk / 252 Spe
 Naive Nature
-Toxic
-Protect
-Venoshock
-Bite
+- Toxic
+- Protect
+- Venoshock
+- Bite
+
 === TRAINER_MAY_ROUTE_110_TREECKO ===
 Name: MAY
 Class: Rival
@@ -10084,57 +10086,57 @@ Taillow (F) @ Flame Orb
 Ability: Guts
 EVs: 4 HP / 252 Atk / 252 Spe
 Jolly Nature
-Protect
-Wing Attack
-Quick Attack
-U-turn
+- Protect
+- Wing Attack
+- Quick Attack
+- U-turn
 
 Pichu (F) @ Focus Sash
 Ability: Static
 EVs: 252 SpA / 4 SpD / 252 Spe
 Timid Nature
 IVs: 0 Atk
-Thunder Shock
-Psybeam
-Draining Kiss
-Nasty Plot
+- Thunder Shock
+- Psybeam
+- Draining Kiss
+- Nasty Plot
 
 Chimchar (M) @ Passho Berry
 Ability: Iron Fist
 EVs: 248 HP / 252 Atk / 8 SpD
 Adamant Nature
-Mach Punch
-Flame Wheel
-Work Up
-Trailblaze
+- Mach Punch
+- Flame Wheel
+- Work Up
+- Trailblaze
 
 Mudkip (M) @ Oran Berry
 Ability: Damp
 EVs: 248 HP / 8 Atk / 252 SpA
 Quiet Nature
-Water Pledge
-Icy Wind
-Mud Shot
-Aqua Jet
+- Water Pledge
+- Icy Wind
+- Mud Shot
+- Aqua Jet
 
 Bulbasaur (F) @ Black Sludge
 Ability: Overgrow
 EVs: 252 HP / 4 SpA / 252 SpD
 Calm Nature
 IVs: 0 Atk
-Mega Drain
-Leech Seed
-Sleep Powder
-Mud Shot
+- Mega Drain
+- Leech Seed
+- Sleep Powder
+- Mud Shot
 
 Stunky (M) @ Leftovers
 Ability: Aftermath
 EVs: 252 HP / 4 Atk / 252 Spe
 Naive Nature
-Toxic
-Protect
-Venoshock
-Bite
+- Toxic
+- Protect
+- Venoshock
+- Bite
 
 === TRAINER_MAY_ROUTE_110_TORCHIC ===
 Name: MAY
@@ -17209,29 +17211,29 @@ Mime Jr. (F) @ Light Clay
 Ability: Technician
 EVs: 252 HP / 4 Atk / 252 SpD
 Sassy Nature
-Fake Out
-Confusion
-Light Screen
-Reflect
+- Fake Out
+- Confusion
+- Light Screen
+- Reflect
 
 Pansear (M) @ Air Balloon
 Ability: Blaze
 EVs: 248 HP / 8 Atk / 252 SpD
 Sassy Nature
-Ember
-Protect
-Helping Hand
-Bite
+- Ember
+- Protect
+- Helping Hand
+- Bite
 
 Litleo (F) @ Wise Glasses
 Ability: Unnerve
 EVs: 4 HP / 252 SpA / 252 Spe
 Timid Nature
 IVs: 0 Atk
-Ember
-Protect
-Work Up
-Echoed Voice
+- Ember
+- Protect
+- Work Up
+- Echoed Voice
 
 === TRAINER_GRUNT_MAGMACAMP_2 ===
 Name: Alpha
@@ -17244,56 +17246,57 @@ Sandile (M) @ Assault Vest
 Ability: Intimidate
 EVs: 248 HP / 252 Atk / 8 SpD
 Adamant Nature
-Bite
-Sand Tomb
-Rock Tomb
-Fire Fang
+- Bite
+- Sand Tomb
+- Rock Tomb
+- Fire Fang
 
 Cubone (M) @ Thick Club
 Ability: Battle Armor
 EVs: 248 HP / 252 Atk / 8 SpD
 Adamant Nature
-Detect
-Rock Tomb
-Aerial Ace
-Bulldoze
+- Detect
+- Rock Tomb
+- Aerial Ace
+- Bulldoze
 
 Baltoy @ Leftovers
 Ability: Levitate
 EVs: 252 HP / 252 SpA / 4 SpD
 Modest Nature
 IVs: 0 Atk
-Calm Mind
-Confusion
-Mud Shot
-Ancient Power
+- Calm Mind
+- Confusion
+- Mud Shot
+- Ancient Power
+
 Cleffa (F) @ Eviolite
 Ability: Magic Guard
 EVs: 252 HP / 252 SpA / 4 SpD
 Modest Nature
 IVs: 0 Atk
-Calm Mind
-Draining Kiss
-Confusion
-Shock Wave
+- Calm Mind
+- Draining Kiss
+- Confusion
+- Shock Wave
 
 Slowpoke (F) @ Leftovers
 Ability: Regenerator
 EVs: 252 HP / 252 SpA / 4 SpD
 Modest Nature
-Flip Turn
-Psybeam
-Water Pulse
-Yawn
+- Flip Turn
+- Psybeam
+- Water Pulse
+- Yawn
 
 Inkay (M) @ Assault Vest
 Ability: Contrary
 EVs: 252 HP / 252 Atk / 4 SpD
 Adamant Nature
-Psycho Cut
-Payback
-Aerial Ace
-Aqua Jet
+- Psycho Cut
+- Payback
+- Aerial Ace
+ - Aqua Jet
 
 === TRAINER_GANDALF ===
 Name: Gandalf
@@ -17308,28 +17311,28 @@ Ability: Magic Guard
 EVs: 252 HP / 252 SpA / 4 SpD
 Modest Nature
 IVs: 0 Atk
-Calm Mind
-Draining Kiss
-Confusion
-Shock Wave
+- Calm Mind
+- Draining Kiss
+- Confusion
+- Shock Wave
 
 Slowpoke (F) @ Leftovers
 Ability: Regenerator
 EVs: 252 HP / 252 SpA / 4 SpD
 Modest Nature
-Flip Turn
-Psybeam
-Water Pulse
-Yawn
+- Flip Turn
+- Psybeam
+- Water Pulse
+- Yawn
 
 Inkay (M) @ Assault Vest
 Ability: Contrary
 EVs: 252 HP / 252 Atk / 4 SpD
 Adamant Nature
-Psycho Cut
-Payback
-Aerial Ace
-Aqua Jet
+- Psycho Cut
+- Payback
+- Aerial Ace
+- Aqua Jet
 
 
 

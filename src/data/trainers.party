@@ -5983,7 +5983,7 @@ Shroodle (M) @ Flying Gem
 Ability: Unburden
 EVs: 4 HP / 252 Atk / 252 Spe
 Adamant Nature
-Trailblaze
+- Trailblaze
 - Poison Fang
 - Acrobatics
 - Swords Dance
@@ -17296,7 +17296,7 @@ Adamant Nature
 - Psycho Cut
 - Payback
 - Aerial Ace
- - Aqua Jet
+- Aqua Jet
 
 === TRAINER_GANDALF ===
 Name: Gandalf
@@ -17349,7 +17349,7 @@ Meowth (M) @ Normal Gem
 Ability: Technician
 EVs: 4 HP / 252 Atk / 252 Spe
 Jolly Nature
-Fake Out
+- Fake Out
 - Pay Day
 - Bite
 - Aerial Ace
@@ -17359,7 +17359,7 @@ Ability: Technician
 EVs: 4 HP / 252 SpA / 252 Spe
 Timid Nature
 IVs: 0 Atk
-Nasty Plot
+- Nasty Plot
 - Snarl
 - Round
 - Mud-Slap

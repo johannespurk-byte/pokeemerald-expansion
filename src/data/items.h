@@ -371,7 +371,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_QUICK_BALL] =
     {
         .name = ITEM_NAME("Quick Ball"),
-        .price = 1000,
+        .price = 500,
         .description = COMPOUND_STRING(
             "Works well if\n"
             "used on the\n"
@@ -2035,7 +2035,7 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("Rare Candy"),
         .pluralName = ITEM_PLURAL_NAME("Rare Candies"),
-        .price = (I_PRICE >= GEN_7) ? 10000 : 4800,
+        .price = (I_PRICE >= GEN_7) ? 10 : 100,
         .description = COMPOUND_STRING(
             "Raises the level\n"
             "of a Pokémon by\n"

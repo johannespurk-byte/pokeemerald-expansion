@@ -56,6 +56,68 @@
 #include "constants/trainer_hill.h"
 #include "constants/weather.h"
 #include "fishing.h"
+#include "pokemon.h"
+#include "random.h"
+bool8 GiveRandomTrainerEgg(void)
+{
+    // Holt die Trainer-ID direkt aus dem ersten gegnerischen Pokémon im Kampf
+    u32 opponentId = GetMonData(&gEnemyParty[0], MON_DATA_OT_ID, NULL);
+
+    // Kürzt die 32-Bit-ID auf die für das Array benötigte 16-Bit-Trainer-Nummer
+    u16 trainerIndex = opponentId & 0xFFFF;
+
+    // Liest die Trainerklasse fehlerfrei über das Pfeil-Symbol aus
+    u16 trainerClass = gTrainers[trainerIndex]->trainerClass;
+
+    // 1. Liste der verbotenen Trainer-Klassen (Bosse, Diebe, Rivalen, Leiter)
+    if (trainerClass == TRAINER_CLASS_AQUA_LEADER ||
+        trainerClass == TRAINER_CLASS_AQUA_ADMIN ||
+        trainerClass == TRAINER_CLASS_MAGMA_LEADER ||
+        trainerClass == TRAINER_CLASS_MAGMA_ADMIN ||
+        trainerClass == TRAINER_CLASS_LEADER ||
+        trainerClass == TRAINER_CLASS_RIVAL ||
+        trainerClass == TRAINER_CLASS_TEAM_ROCKET_FRLG)
+    {
+        return FALSE; // Keine Belohnung von diesen Trainern
+    }
+
+    // Prüfen, ob das Spieler-Team voll ist
+    if (CalculatePlayerPartyCount() >= PARTY_SIZE)
+    {
+        return FALSE; // Team ist voll, kein Ei möglich
+    }
+
+    // 2. Zufälliges Pokémon auswählen (Kompatibel mit Gen 9 Engine)
+    u16 randomSpecies;
+
+    do {
+        randomSpecies = (Random() % (NUM_SPECIES - 1)) + 1;
+
+    } while (randomSpecies == SPECIES_EGG ||
+        gSpeciesInfo[randomSpecies].isSubLegendary ||
+        gSpeciesInfo[randomSpecies].isSubLegendary ||
+        gSpeciesInfo[randomSpecies].isMythical ||
+        gSpeciesInfo[randomSpecies].isUltraBeast ||
+        gSpeciesInfo[randomSpecies].natDexNum == 0);   // Filtert alle ungültigen Formen/Megas heraus
+
+    // Ei an die nächste freie Stelle im Team setzen
+    u8 partyIndex = CalculatePlayerPartyCount();
+
+    struct OriginalTrainerId emptyOtId = { 0 };
+    CreateMon(&gPlayerParty[partyIndex], randomSpecies, 1, 0, emptyOtId);
+
+    // Macht das frisch erstellte Pokémon zu einem Ei
+    bool8 isEgg = TRUE;
+    SetMonData(&gPlayerParty[partyIndex], MON_DATA_IS_EGG, &isEgg);
+
+    // 3. Schritte zum Schlüpfen auf 1 setzen (Nutzt MON_DATA_FRIENDSHIP)
+    u8 steps = 1;
+    SetMonData(&gPlayerParty[partyIndex], MON_DATA_FRIENDSHIP, &steps);
+
+    return TRUE;
+}
+
+
 
 enum TransitionType
 {

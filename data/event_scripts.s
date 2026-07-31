@@ -1754,3 +1754,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/Mamor_Cace/scripts.inc"
 
 	.include "data/maps/Magmacamp/scripts.inc"
+
+	.include "data/maps/MARMORCITYSCHOP/scripts.inc"

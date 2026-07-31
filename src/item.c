@@ -21,6 +21,8 @@
 #include "constants/moves.h"
 #include "constants/item_effects.h"
 #include "constants/hold_effects.h"
+const u8 sInfiniteCandyDesc[] = _("Ein unendliches Bonbon.\nLevelt ein Pokemon\nbis zum Level-Cap.");
+void ItemUse_InfiniteCapCandy(u8 partyIndex);
 
 #define DUMMY_PC_BAG_POCKET                 \
 {                                           \
@@ -987,4 +989,25 @@ bool32 IsItemShopCriteriaFulfilled(u32 itemId)
         return TRUE;
 
     return func(SanitizeItemId(itemId));
+}
+
+// Funktion für das unendliche Level-Cap-Bonbon
+void ItemUse_InfiniteCapCandy(u8 partyIndex)
+{
+    extern u32 GetCurrentLevelCap(void);
+    u32 maxLevel = GetCurrentLevelCap();
+    u32 currentLevel = GetMonData(&gPlayerParty[partyIndex], MON_DATA_LEVEL, NULL);
+
+    if (currentLevel >= maxLevel || currentLevel >= 100)
+    {
+        return;
+    }
+
+    u16 species = GetMonData(&gPlayerParty[partyIndex], MON_DATA_SPECIES, NULL);
+    u32 targetExp = gExperienceTables[gSpeciesInfo[species].growthRate][maxLevel];
+
+    SetMonData(&gPlayerParty[partyIndex], MON_DATA_EXP, &targetExp);
+    CalculateMonStats(&gPlayerParty[partyIndex]);
+
+    return;
 }

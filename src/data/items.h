@@ -2050,6 +2050,7 @@ const struct ItemInfo gItemsInfo[] =
         .iconPalette = gItemIconPalette_RareCandy,
     },
 
+
     [ITEM_EXP_CANDY_XS] =
     {
         .name = ITEM_NAME("Exp. Candy XS"),
@@ -15959,6 +15960,18 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_Dive,
         .iconPic = gItemIcon_QuestionMark,
         .iconPalette = gItemIconPalette_QuestionMark,
+    },
+
+    [ITEM_INFINITE_CANDY] =
+    {
+        .name = ITEM_NAME("Cap-Bonbon"), // KORREKTUR: Nutzt das ITEM_NAME-Makro deiner Engine
+        .price = 0,
+        .description = sInfiniteCandyDesc,
+        .pocket = POCKET_BERRIES,
+        .type = ITEM_USE_PARTY_MENU,    // ERGÄNZUNG: Damit öffnet sich die Teamauswahl
+        .fieldUseFunc = ItemUse_InfiniteCapCandy,
+        .iconPic = gItemIcon_QuestionMark,        // ERGÄNZUNG: Standard-Icon (Fragezeichen)
+        .iconPalette = gItemIconPalette_QuestionMark, // ERGÄNZUNG: Standard-Palette
     },
 };
 

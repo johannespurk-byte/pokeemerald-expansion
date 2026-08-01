@@ -868,9 +868,9 @@ bool32 IsItemPermittedAtLevel(u16 item, u8 level)
     }
 }
 
-void MaybeStripTrainerItem(struct Pokemon *mon, u16 trainerId, u8 scaledLevel)
+void MaybeStripTrainerItem(struct Pokemon* mon, u16 trainerId, u8 scaledLevel)
 {
-    const struct LevelScalingConfig *config = GetTrainerLevelScalingConfig(trainerId);
+    const struct LevelScalingConfig* config = GetTrainerLevelScalingConfig(trainerId);
     if (config->mode == LEVEL_SCALING_NONE || !config->scaleItems)
         return;
 
@@ -882,4 +882,8 @@ void MaybeStripTrainerItem(struct Pokemon *mon, u16 trainerId, u8 scaledLevel)
     }
 }
 
+
 #endif // B_LEVEL_SCALING_ENABLED
+
+
+ 

@@ -11208,9 +11208,35 @@ void ApplyExperienceMultipliers(s32 *expAmount, u8 expGetterMonId, u8 faintedBat
         value *= sExperienceScalingFactors[(faintedLevel * 2) + 10];
         value /= sExperienceScalingFactors[faintedLevel + expGetterLevel + 10];
 
-        *expAmount = value + 1;
+        value *= sExperienceScalingFactors[(faintedLevel * 2) + 10];
+        value /= sExperienceScalingFactors[faintedLevel + expGetterLevel + 10];
+
+        *expAmount = value; // KORREKTUR: Setzt das normale Ende wieder ein!
     }
-}
+
+    
+ 
+    
+
+    // --- START LEVEL CAP SYSTEM ---
+    {
+        extern u32 GetCurrentLevelCap(void);
+        u32 levelCap = GetCurrentLevelCap();
+        u8 monLevel = GetMonData(&gParties[B_TRAINER_PLAYER][expGetterMonId], MON_DATA_LEVEL);
+
+        if (monLevel >= levelCap)
+        {
+            *expAmount = 0; // HARD CAP: Absolut 0 EXP ab dem Limit!
+
+            // SOFT CAP (Falls du lieber Soft Cap willst, nimm die Zeile darunter):
+            // *expAmount = 1; 
+        }
+    }
+    // --- END LEVEL CAP SYSTEM ---
+} // <-- Das hier ist die originale, schließende Klammer aus Zeile 11214!
+
+
+
 
 #if SWSH_ITEM_MENU_IN_BATTLE_USE
 static bool32 ItemUseTargetsPartnerParty(enum BattlerId battler)

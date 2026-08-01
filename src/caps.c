@@ -7,36 +7,25 @@
 
 u32 GetCurrentLevelCap(void)
 {
-    static const u32 sLevelCapFlagMap[][2] =
-    {
-        {FLAG_BADGE01_GET, 15},
-        {FLAG_BADGE02_GET, 19},
-        {FLAG_BADGE03_GET, 24},
-        {FLAG_BADGE04_GET, 29},
-        {FLAG_BADGE05_GET, 31},
-        {FLAG_BADGE06_GET, 33},
-        {FLAG_BADGE07_GET, 42},
-        {FLAG_BADGE08_GET, 46},
-        {FLAG_IS_CHAMPION, 58},
-    };
+    extern bool8 FlagGet(u16 flag);
 
-    u32 i;
+    if (FlagGet(FLAG_SYS_GAME_CLEAR))
+        return 100;
 
-    if (B_LEVEL_CAP_TYPE == LEVEL_CAP_FLAG_LIST)
-    {
-        for (i = 0; i < ARRAY_COUNT(sLevelCapFlagMap); i++)
-        {
-            if (!FlagGet(sLevelCapFlagMap[i][0]))
-                return sLevelCapFlagMap[i][1];
-        }
-    }
-    else if (B_LEVEL_CAP_TYPE == LEVEL_CAP_VARIABLE)
-    {
-        return VarGet(B_LEVEL_CAP_VARIABLE);
-    }
+    if (FlagGet(FLAG_BADGE08_GET)) return 55; // 8. Orden (Juan)
+    if (FlagGet(FLAG_BADGE07_GET)) return 45; // 7. Orden (Ben & Svenja)
+    if (FlagGet(FLAG_BADGE06_GET)) return 40; // 6. Orden (Wibke)
+    if (FlagGet(FLAG_BADGE05_GET)) return 35; // 5. Orden (Norman)
+    if (FlagGet(FLAG_BADGE04_GET)) return 30; // 4. Orden (Flavia)
+    if (FlagGet(FLAG_BADGE03_GET)) return 24; // 3. Orden (Walter)
+    if (FlagGet(FLAG_BADGE02_GET)) return 19; // 2. Orden (Kamillo)
+    if (FlagGet(FLAG_BADGE01_GET)) return 15; // 1. Orden (Felizia)
 
-    return MAX_LEVEL;
+    return 8; // Dein custom Start-Cap von Level 8 vor der ersten Arena!
 }
+
+
+  
 
 u32 GetSoftLevelCapExpValue(u32 level, u32 expValue)
 {

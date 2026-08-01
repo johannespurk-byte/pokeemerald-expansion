@@ -11199,8 +11199,6 @@ void ApplyExperienceMultipliers(s32 *expAmount, u8 expGetterMonId, u8 faintedBat
         *expAmount = (*expAmount * 150) / 100;
     if (GetConfig(B_SCALED_EXP) >= GEN_5 && GetConfig(B_SCALED_EXP) != GEN_6)
     {
-        // Note: There is an edge case where if a Pokémon receives a large amount of exp, it wouldn't be properly calculated
-        //       because of multiplying by scaling factor(the value would simply be larger than an u32 can hold). Hence u64 is needed.
         u64 value = *expAmount;
         u8 faintedLevel = gBattleMons[faintedBattler].level;
         u8 expGetterLevel = GetMonData(&gParties[B_TRAINER_PLAYER][expGetterMonId], MON_DATA_LEVEL);
@@ -11208,32 +11206,10 @@ void ApplyExperienceMultipliers(s32 *expAmount, u8 expGetterMonId, u8 faintedBat
         value *= sExperienceScalingFactors[(faintedLevel * 2) + 10];
         value /= sExperienceScalingFactors[faintedLevel + expGetterLevel + 10];
 
-        value *= sExperienceScalingFactors[(faintedLevel * 2) + 10];
-        value /= sExperienceScalingFactors[faintedLevel + expGetterLevel + 10];
-
-        *expAmount = value; // KORREKTUR: Setzt das normale Ende wieder ein!
+        *expAmount = value;
     }
+}
 
-    
- 
-    
-
-    // --- START LEVEL CAP SYSTEM ---
-    {
-        extern u32 GetCurrentLevelCap(void);
-        u32 levelCap = GetCurrentLevelCap();
-        u8 monLevel = GetMonData(&gParties[B_TRAINER_PLAYER][expGetterMonId], MON_DATA_LEVEL);
-
-        if (monLevel >= levelCap)
-        {
-            *expAmount = 0; // HARD CAP: Absolut 0 EXP ab dem Limit!
-
-            // SOFT CAP (Falls du lieber Soft Cap willst, nimm die Zeile darunter):
-            // *expAmount = 1; 
-        }
-    }
-    // --- END LEVEL CAP SYSTEM ---
-} // <-- Das hier ist die originale, schließende Klammer aus Zeile 11214!
 
 
 

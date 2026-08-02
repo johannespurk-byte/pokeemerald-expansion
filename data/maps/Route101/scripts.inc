@@ -22,7 +22,7 @@ Route101_EventScript_StartBirchRescue::
 	msgbox Route101_Text_HelpMe, MSGBOX_DEFAULT
 	closemessage
 	setobjectxy LOCALID_ROUTE101_BIRCH, 0, 15
-	setobjectxy LOCALID_ROUTE101_ZIGZAGOON, 0, 16 @ Nutzt die bestehende ID für Groudon
+	setobjectxy LOCALID_ROUTE101_ZIGZAGOON, 0, 16
 	applymovement LOCALID_PLAYER, Route101_Movement_EnterScene
 	applymovement LOCALID_ROUTE101_BIRCH, Route101_Movement_BirchRunAway1
 	applymovement LOCALID_ROUTE101_ZIGZAGOON, Route101_Movement_ZigzagoonChase1
@@ -37,34 +37,9 @@ Route101_EventScript_StartBirchRescue::
 	waitmovement 0
 	msgbox Route101_Text_PleaseHelp, MSGBOX_DEFAULT
 	closemessage
-	
-	@ --- GROUDON KAMPF MIT ORIGINAL-MUSIK ---
-	playbgm MUS_VS_KYOGRE_GROUDON, FALSE @ Startet das originale Groudon-Kampfthema
-	setwildbattle SPECIES_GROUDON, 5, ITEM_NONE
-	playmoncry SPECIES_GROUDON, CRY_MODE_ENCOUNTER
-	waitmoncry
-	dowildbattle
-	
-	@ Überprüft das Kampfergebnis
-	specialvar VAR_RESULT, GetBattleOutcome
-	goto_if_eq VAR_RESULT, B_OUTCOME_WON, Route101_EventScript_GroudonDefeated
-	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, Route101_EventScript_GroudonDefeated
-	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, Route101_EventScript_GroudonDefeated
-	end
-
-Route101_EventScript_GroudonDefeated::
-	fadescreenswapbuffers FADE_TO_BLACK
-	removeobject LOCALID_ROUTE101_ZIGZAGOON
-	fadescreenswapbuffers FADE_FROM_BLACK
-	
-	@ Stellt die normale Musik von Route 101 wieder her
-	savebgm MUS_ROUTE101
-	fadedefaultbgm
-	
-	setvar VAR_ROUTE101_STATE, 2 @ Bringt dich zum Labor / zur Starter-Auswahl
+	setvar VAR_ROUTE101_STATE, 2
 	releaseall
 	end
-
 
 Route101_EventScript_PreventExitSouth::
 	lockall
@@ -320,4 +295,3 @@ Route101_Text_WildPokemonInTallGrass:
 Route101_Text_RouteSign:
 	.string "ROUTE 101\n"
 	.string "{UP_ARROW} OLDALE TOWN$"
-

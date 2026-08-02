@@ -19,9 +19,9 @@ u32 GetCurrentLevelCap(void)
     if (FlagGet(FLAG_BADGE04_GET)) return 30; // 4. Orden (Flavia)
     if (FlagGet(FLAG_BADGE03_GET)) return 24; // 3. Orden (Walter)
     if (FlagGet(FLAG_BADGE02_GET)) return 19; // 2. Orden (Kamillo)
-    if (FlagGet(FLAG_BADGE01_GET)) return 15; // 1. Orden (Felizia)
+    if (FlagGet(FLAG_BADGE01_GET)) return 18; // 1. Orden (Felizia)
 
-    return 8; // Dein custom Start-Cap von Level 8 vor der ersten Arena!
+    return 18; // Dein custom Start-Cap von Level 8 vor der ersten Arena!
 }
 
 

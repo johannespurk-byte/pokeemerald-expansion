@@ -982,7 +982,12 @@ static void UseTMHM(u8 taskId)
 
 static void RemoveUsedItem(void)
 {
-    RemoveBagItem(gSpecialVar_ItemId, 1);
+    // PRÜFUNG: Wenn das Item KEINE TM oder VM ist, wird es normal verbraucht
+    if (GetItemPocket(gSpecialVar_ItemId) != POCKET_TM_HM)
+    {
+        RemoveBagItem(gSpecialVar_ItemId, 1);
+    }
+
     CopyItemName(gSpecialVar_ItemId, gStringVar2);
     StringExpandPlaceholders(gStringVar4, gText_PlayerUsedVar2);
     if (CurrentBattlePyramidLocation() == PYRAMID_LOCATION_NONE)
@@ -996,6 +1001,7 @@ static void RemoveUsedItem(void)
         UpdatePyramidBagCursorPos();
     }
 }
+
 
 void ItemUseOutOfBattle_Repel(u8 taskId)
 {

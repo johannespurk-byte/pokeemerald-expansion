@@ -6242,14 +6242,14 @@ Zigzagoon
 Level: 16
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_ALLEN ===
-Name: ALLEN
+=== TRAINER_BIRDO ===
+Name: BIRDO
 Class: Youngster
 Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Smart Trainer
 
 Zigzagoon
 Level: 4
@@ -11400,15 +11400,37 @@ Pic: Lass
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Check Bad Move
+AI: Smart Trainer
 
-Zigzagoon
-Level: 4
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Roselia (F) @ Life Orb  
+Ability: Poison Point  
+EVs: 248 HP / 252 SpA / 8 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Sludge Bomb  
+- Growth  
+- Psybeam  
+- Mega Drain  
 
-Shroomish
-Level: 4
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Staravia (M) @ Silk Scarf  
+Ability: Intimidate  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Wing Attack  
+- Quick Attack  
+- Bulk Up  
+- Brick Break  
+
+Barboach @ Rindo Berry  
+Ability: Anticipation  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Dragon Dance  
+- Earthquake  
+- Liquidation  
+- Rock Slide 
+
+
 
 === TRAINER_HALEY_1 ===
 Name: HALEY
@@ -11604,15 +11626,38 @@ Pic: Bug Catcher
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Smart Trainer
 
-Wurmple
-Level: 4
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Spinarak @ Focus Sash  
+Ability: Sniper  
+EVs: 248 HP / 252 Atk / 8 SpD  
+Adamant Nature  
+- Shadow Sneak  
+- Bug Bite  
+- Swords Dance  
+- Poison Sting  
 
-Wurmple
-Level: 4
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ledyba (F) @ Choice Specs  
+Ability: Swarm  
+EVs: 248 HP / 252 SpA / 8 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Psybeam  
+- Silver Wind  
+- Air Cutter  
+- Mega Drain  
+
+Burmy-Trash (F) @ Eviolite  
+Ability: Overcoat  
+Shiny: Yes  
+EVs: 248 HP / 8 SpA / 252 SpD  
+Calm Nature  
+IVs: 0 Atk  
+- Toxic  
+- Protect  
+- Struggle Bug  
+- Mega Drain  
+
 
 === TRAINER_LYLE ===
 Name: LYLE

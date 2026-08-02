@@ -10241,6 +10241,26 @@
       "blockdata_filepath": "data/layouts/Magmacamp/map.bin",
       "border_height": 2,
       "border_width": 2
+    },
+    {
+      "id": "LAYOUT_Fossil_Ruins",
+      "name": "Fossil_Ruins_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_NavelRock",
+      "border_filepath": "data/layouts/Fossil_Ruins/border.bin",
+      "blockdata_filepath": "data/layouts/Fossil_Ruins/map.bin"
+    },
+    {
+      "id": "LAYOUT_FOSSIL_RUINS_2",
+      "name": "Fossil_Ruins_2_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_NavelRock",
+      "border_filepath": "data/layouts/Fossil_Ruins_2/border.bin",
+      "blockdata_filepath": "data/layouts/Fossil_Ruins_2/map.bin"
     }
   ]
 }

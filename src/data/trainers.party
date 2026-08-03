@@ -6251,13 +6251,70 @@ Music: Male
 Double Battle: No
 AI: Smart Trainer
 
-Zigzagoon
-Level: 4
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+SPECIES_CHARMANDER (M) @ Berry Juice  
+Ability: Blaze  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+- Ember  
+- Air Cutter  
+- Dragon Breath  
+- SMOKESCREEN  
 
-Taillow
-Level: 3
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Rookidee (M) @ Eviolite  
+Ability: Unnerve  
+Level: 18  
+EVs: 252 HP / 252 Def / 4 SpD  
+Impish Nature  
+- Pluck  
+- Power Trip  
+- Taunt  
+- Hone Claws  
+
+
+
+Gligar (M) @ Eviolite  
+Ability: Hyper Cutter  
+EVs: 252 HP / 4 Atk / 252 Def  
+Impish Nature  
+- Bulldoze  
+- Wing Attack  
+- Poison Sting  
+- Quick Attack  
+
+
+
+Wattrel (M) @ Sharp Beak  
+Ability: Wind Power  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Spark  
+- Wing Attack  
+- Quick Attack  
+- Roost  
+
+
+Bagon (M) @ Life Orb  
+Ability: Rock Head  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Adamant Nature  
+- Bite  
+- Ember  
+- Headbutt  
+- Dragon Dance  
+
+
+Togepi (M) @ Eviolite  
+Ability: Serene Grace  
+EVs: 252 HP / 4 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Water Pulse  
+- Ancient Power  
+- Metronome  
+- Yawn  
+
 
 === TRAINER_TIMMY ===
 Name: TIMMY
@@ -11402,33 +11459,69 @@ Music: Female
 Double Battle: No
 AI: Smart Trainer
 
-Roselia (F) @ Life Orb  
-Ability: Poison Point  
-EVs: 248 HP / 252 SpA / 8 SpD  
+Marshtomp (M) @ Soft Sand  
+Ability: Torrent   
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Adamant Nature  
+- Water Gun  
+- Mud Shot  
+- Mud-Slap  
+- Rock Tomb  
+
+
+Shellos (M) @ Mystic Water  
+Ability: Sticky Hold  
+EVs: 252 HP / 252 SpA / 4 SpD  
 Modest Nature  
 IVs: 0 Atk  
-- Sludge Bomb  
-- Growth  
-- Psybeam  
-- Mega Drain  
+- Water Pulse  
+- Mud-Slap  
+- Recover  
+- Hidden Power 
 
-Staravia (M) @ Silk Scarf  
-Ability: Intimidate  
-EVs: 252 Atk / 4 SpD / 252 Spe  
-Jolly Nature  
-- Wing Attack  
-- Quick Attack  
-- Bulk Up  
-- Brick Break  
+ 
 
-Barboach @ Rindo Berry  
-Ability: Anticipation  
+
+Bellsprout (M) @ Miracle Seed  
+Ability: Chlorophyll  
 EVs: 4 HP / 252 Atk / 252 Spe  
 Adamant Nature  
-- Dragon Dance  
-- Earthquake  
-- Liquidation  
-- Rock Slide 
+- Vine Whip  
+- Poison Powder  
+- Wrap  
+- Growth  
+
+
+Zubat (M) @ Sharp Beak  
+Ability: Inner Focus  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Wing Attack  
+- Bite  
+- Poison Fang  
+- Supersonic  
+
+
+Gastly (M) @ Spell Tag  
+Ability: Levitate  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Hex  
+- Sludge  
+- Confuse Ray  
+- Hypnosis  
+
+
+Croagunk (M) @ Black Belt  
+Ability: Dry Skin  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Power-Up Punch  
+- Poison Sting  
+- Sucker Punch  
+- Feint Attack  
+
 
 
 

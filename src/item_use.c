@@ -53,6 +53,7 @@
 #include "field_control_avatar.h"
 
 static void SetUpItemUseCallback(u8);
+static void Task_UseLevelCapCandyOnTeam(u8 taskId);
 static void FieldCB_UseItemOnField(void);
 static void Task_CallItemUseOnFieldCallback(u8);
 static void Task_PartyMenuItemUseFromField(u8);
@@ -92,6 +93,45 @@ static void ItemUseOnFieldCB_RockSmash(u8 taskId);
 static void ItemUseOnFieldCB_Waterfall(u8 taskId);
 static void ItemUseOnFieldCB_Dive(u8 taskId);
 static void ItemUseOnFieldCB_DiveUnderwater(u8 taskId);
+static const u8 sText_LevelCapCandySuccess[] = _("Das gesamte Team wurde auf das Level-Cap angehoben!");
+static const u8 sText_LevelCapCandyNoEffect[] = _("Alle Pokemon im Team haben das Cap bereits erreicht.");
+
+static void Task_UseLevelCapCandyOnTeam(u8 taskId)
+{
+    u32 i;
+    u32 currentCap = VarGet(B_LEVEL_CAP_VARIABLE);
+    bool8 leveledAny = FALSE;
+
+    if (currentCap == 0)
+        currentCap = 100;
+
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        struct Pokemon* mon = &gParties[B_TRAINER_PLAYER][i];
+
+        if (GetMonData(mon, MON_DATA_SPECIES) != SPECIES_NONE && !GetMonData(mon, MON_DATA_IS_EGG))
+        {
+            u8 currentLevel = GetMonData(mon, MON_DATA_LEVEL);
+
+            if (currentLevel < currentCap)
+            {
+                SetMonData(mon, MON_DATA_LEVEL, &currentCap);
+                CalculateMonStats(mon);
+                MonTryLearningNewMove(mon, TRUE);
+                leveledAny = TRUE;
+            }
+        }
+    }
+
+    if (leveledAny)
+    {
+        DisplayItemMessage(taskId, FONT_NORMAL, sText_LevelCapCandySuccess, CloseItemMessage);
+    }
+    else
+    {
+        DisplayItemMessage(taskId, FONT_NORMAL, sText_LevelCapCandyNoEffect, CloseItemMessage);
+    }
+}
 
 static const u8 sText_CantDismountBike[] = _("You can't dismount your BIKE here.{PAUSE_UNTIL_PRESS}");
 static const u8 sText_ItemFinderNearby[] = _("Huh?\nThe ITEMFINDER's responding!\pThere's an item buried around here!{PAUSE_UNTIL_PRESS}");
@@ -933,11 +973,19 @@ void ItemUseOutOfBattle_PPUp(u8 taskId)
     SetUpItemUseCallback(taskId);
 }
 
-void ItemUseOutOfBattle_RareCandy(u8 taskId)
+void ItemUseAction_RareCandy(u8 taskId)
 {
-    gItemUseCB = ItemUseCB_RareCandy;
+    if (gSpecialVar_ItemId == ITEM_LEVEL_CAP_CANDY)
+    {
+        Task_UseLevelCapCandyOnTeam(taskId);
+        return; // Verhindert, dass das Bonbon verbraucht wird!
+    }
+
+    // Normales Sonderbonbon bleibt unberührt:
+    gSpecialVar_Result = FALSE;
     SetUpItemUseCallback(taskId);
 }
+
 
 void ItemUseOutOfBattle_DynamaxCandy(u8 taskId)
 {

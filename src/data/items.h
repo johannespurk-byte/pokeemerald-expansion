@@ -15948,7 +15948,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_DIVE_TOOL] =
     {
-        .name = ITEM_NAME("Dive Item"),
+        .name = COMPOUND_STRING("Dive Item"), // Korrigiert zu COMPOUND_STRING
         .price = 0,
         .description = COMPOUND_STRING(
             "A diving apparatus\n"
@@ -15962,17 +15962,23 @@ const struct ItemInfo gItemsInfo[] =
         .iconPalette = gItemIconPalette_QuestionMark,
     },
 
-    [ITEM_INFINITE_CANDY] =
+    [ITEM_LEVEL_CAP_CANDY] =
     {
-        .name = ITEM_NAME("Cap-Bonbon"), // KORREKTUR: Nutzt das ITEM_NAME-Makro deiner Engine
+        .name = COMPOUND_STRING("Lvl-Cap Candy"),
         .price = 0,
-        .description = sInfiniteCandyDesc,
-        .pocket = POCKET_BERRIES,
-        .type = ITEM_USE_PARTY_MENU,    // ERGÄNZUNG: Damit öffnet sich die Teamauswahl
-        .fieldUseFunc = ItemUse_InfiniteCapCandy,
-        .iconPic = gItemIcon_QuestionMark,        // ERGÄNZUNG: Standard-Icon (Fragezeichen)
-        .iconPalette = gItemIconPalette_QuestionMark, // ERGÄNZUNG: Standard-Palette
+        .description = COMPOUND_STRING("Bringt das ganze Team auf das aktuelle Cap."),
+        .holdEffect = HOLD_EFFECT_NONE,
+        .holdEffectParam = 0,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_Medicine, // Öffnet das Team-Menü fehlerfrei
     },
+
+
+
+
+
+
 };
 
 #undef ITEM_NAME

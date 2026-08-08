@@ -165,6 +165,17 @@
  *  - Destroys itself when done.
  */
 
+
+// =========================================================================
+// CUSTOM INTRO-UMLEITUNG: TROY UND TANHEL STATT BIRK UND LOTURZEL
+// =========================================================================
+#undef SPECIES_LOTAD
+#define SPECIES_LOTAD          SPECIES_BELDUM      // Ersetzt Loturzel durch Tanhel
+
+#undef TRAINER_PIC_PROF_BIRCH
+#define TRAINER_PIC_PROF_BIRCH TRAINER_PIC_STEVEN  // Ersetzt Birks Trainer-Bild durch Troy
+// =========================================================================
+
 #define OPTION_MENU_FLAG (1 << 15)
 
 // Static type declarations
@@ -1406,7 +1417,7 @@ static void Task_NewGameBirchSpeechSub_InitPokeBall(u8 taskId)
     gSprites[spriteId].invisible = FALSE;
     gSprites[spriteId].data[0] = 0;
 
-    CreatePokeballSpriteToReleaseMon(spriteId, gSprites[spriteId].oam.paletteNum, 112, 58, 0, 0, 32, PALETTES_BG, SPECIES_LOTAD);
+    CreatePokeballSpriteToReleaseMon(spriteId, gSprites[spriteId].oam.paletteNum, 112, 58, 0, 0, 32, PALETTES_BG, SPECIES_BELDUM);
     gTasks[taskId].func = Task_NewGameBirchSpeechSub_WaitForLotad;
     gTasks[sBirchSpeechMainTaskId].tTimer = 0;
 }

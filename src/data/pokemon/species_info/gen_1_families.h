@@ -20887,3 +20887,16 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 #ifdef __INTELLISENSE__
 };
 #endif
+// Vorher
+[SPECIES_KADABRA] =
+{
+    ...
+    .evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_ALAKAZAM}),
+},
+
+// Nachher
+[SPECIES_KADABRA] =
+{
+    ...
+    .evolutions = EVOLUTION({EVO_LEVEL, 37, SPECIES_ALAKAZAM}),
+},

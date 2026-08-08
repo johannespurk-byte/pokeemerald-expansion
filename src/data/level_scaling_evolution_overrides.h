@@ -1,74 +1,30 @@
-// Evolution overrides for level scaling
-// These specify minimum levels for Pokémon that evolve via non-level methods
-// (trade, stones, friendship, etc.) to ensure they don't appear at very low levels
-
-const struct EvolutionOverride gEvolutionOverrides[] =
+void BeginEvolutionScene(struct Pokemon *mon, enum Species postEvoSpecies, bool32 canStopEvo, u8 partyId)
 {
-    // Trade evolutions with minimum levels
-    { .species = SPECIES_GENGAR, .minimumLevel = 30 },
-    { .species = SPECIES_ALAKAZAM, .minimumLevel = 30 },
-    { .species = SPECIES_MACHAMP, .minimumLevel = 30 },
-    { .species = SPECIES_GOLEM, .minimumLevel = 30 },
-    { .species = SPECIES_STEELIX, .minimumLevel = 35 },
-    { .species = SPECIES_SCIZOR, .minimumLevel = 40 },
-    { .species = SPECIES_KINGDRA, .minimumLevel = 40 },
-    { .species = SPECIES_PORYGON2, .minimumLevel = 30 },
-    { .species = SPECIES_POLITOED, .minimumLevel = 30 },
-    { .species = SPECIES_SLOWKING, .minimumLevel = 30 },
-    { .species = SPECIES_HUNTAIL, .minimumLevel = 35 },
-    { .species = SPECIES_GOREBYSS, .minimumLevel = 35 },
-    { .species = SPECIES_MILOTIC, .minimumLevel = 35 },
-    { .species = SPECIES_DUSKNOIR, .minimumLevel = 45 },
-    { .species = SPECIES_ELECTIVIRE, .minimumLevel = 45 },
-    { .species = SPECIES_MAGMORTAR, .minimumLevel = 45 },
-    { .species = SPECIES_PORYGON_Z, .minimumLevel = 40 },
-    { .species = SPECIES_RHYPERIOR, .minimumLevel = 45 },
-    { .species = SPECIES_GIGALITH, .minimumLevel = 30 },
-    { .species = SPECIES_CONKELDURR, .minimumLevel = 30 },
-    { .species = SPECIES_ESCAVALIER, .minimumLevel = 35 },
-    { .species = SPECIES_ACCELGOR, .minimumLevel = 35 },
-    { .species = SPECIES_GOURGEIST, .minimumLevel = 40 },
-    { .species = SPECIES_TREVENANT, .minimumLevel = 40 },
-    { .species = SPECIES_SLURPUFF, .minimumLevel = 35 },
-    { .species = SPECIES_AROMATISSE, .minimumLevel = 35 },
+    u16 newSpecies = (u16)postEvoSpecies;
 
-    // Stone evolutions with minimum levels
-    { .species = SPECIES_RAICHU, .minimumLevel = 25 },
-    { .species = SPECIES_CLEFABLE, .minimumLevel = 30 },
-    { .species = SPECIES_WIGGLYTUFF, .minimumLevel = 30 },
-    { .species = SPECIES_NINETALES, .minimumLevel = 30 },
-    { .species = SPECIES_VILEPLUME, .minimumLevel = 30 },
-    { .species = SPECIES_VICTREEBEL, .minimumLevel = 30 },
-    { .species = SPECIES_POLIWRATH, .minimumLevel = 30 },
-    { .species = SPECIES_ARCANINE, .minimumLevel = 35 },
-    { .species = SPECIES_EXEGGUTOR, .minimumLevel = 35 },
-    { .species = SPECIES_STARMIE, .minimumLevel = 30 },
-    { .species = SPECIES_BELLOSSOM, .minimumLevel = 30 },
-    { .species = SPECIES_SUNFLORA, .minimumLevel = 25 },
-    { .species = SPECIES_DELCATTY, .minimumLevel = 25 },
-    { .species = SPECIES_ROSERADE, .minimumLevel = 35 },
-    { .species = SPECIES_TOGEKISS, .minimumLevel = 40 },
-    { .species = SPECIES_LEAFEON, .minimumLevel = 30 },
-    { .species = SPECIES_GLACEON, .minimumLevel = 30 },
-    { .species = SPECIES_FROSLASS, .minimumLevel = 35 },
-    { .species = SPECIES_WHIMSICOTT, .minimumLevel = 30 },
-    { .species = SPECIES_LILLIGANT, .minimumLevel = 30 },
-    { .species = SPECIES_CHANDELURE, .minimumLevel = 40 },
-    { .species = SPECIES_AEGISLASH, .minimumLevel = 40 },
-    { .species = SPECIES_FLORGES, .minimumLevel = 30 },
+    // 1) Setze die Species in den Box-Daten (persistente Daten)
+    SetBoxMonData(&mon->box, MON_DATA_SPECIES, &newSpecies);
 
-    // Friendship evolutions with minimum levels
-    { .species = SPECIES_BLISSEY, .minimumLevel = 35 },
-    { .species = SPECIES_CROBAT, .minimumLevel = 30 },
-    { .species = SPECIES_ESPEON, .minimumLevel = 30 },
-    { .species = SPECIES_UMBREON, .minimumLevel = 30 },
-    { .species = SPECIES_LUCARIO, .minimumLevel = 35 },
-    { .species = SPECIES_SYLVEON, .minimumLevel = 30 },
+    // 2) Kopiere Box -> aktives struct Pokemon und berechne Stats neu
+    BoxMonToMon(&mon->box, mon);
+    CalculateMonStats(mon);
 
-    // Special case evolutions
-    { .species = SPECIES_MR_MIME, .minimumLevel = 25 },
-    { .species = SPECIES_GALLADE, .minimumLevel = 35 },
+    // 3) KP auf das neue Maximum setzen
+    u16 maxHp = GetMonData(mon, MON_DATA_MAX_HP);
+    SetMonData(mon, MON_DATA_HP, &maxHp);
 
-    // Sentinel - must be last
-    { .species = SPECIES_NONE, .minimumLevel = 0 },
-};
+    // 4) Spiele den Cry des neuen Species
+    PlayCry_NormalNoDucking(newSpecies, 0, CRY_VOLUME_RS, CRY_VOLUME_RS);
+
+    // 5) UI aktualisieren, falls Party‑Menu offen (partyId = Slot 0..5)
+    if (partyId < PARTY_SIZE)
+    {
+        // Aktualisiert Icon / Held‑Item / Statusanzeige ähnlich wie RareCandy-Flow
+        UpdateMonDisplayInfoAfterRareCandy(partyId, mon);
+    }
+
+    // 6) Keine Scene starten – Funktion endet hier (headless evolution).
+    // Hinweis: Falls du Pokedex, Mail, Evolutions‑Tracker, Itementfernung, gelehrte Moves etc.
+    // brauchst, füge die entsprechenden Aufrufe hier ein.
+    return;
+}

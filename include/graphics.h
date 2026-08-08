@@ -1,6 +1,22 @@
 #ifndef GUARD_GRAPHICS_H
 #define GUARD_GRAPHICS_H
 
+// ==========================================
+// GLOBALE RETTUNG FÜR KAPUTTE EXPANSION-PALETTEN
+// ==========================================
+#define gItemIconPalette_AbilityCapsule gItemIconPalette_RareCandy
+#define gItemIconPalette_AbilityPatch   gItemIconPalette_RareCandy
+#define gItemIconPalette_AbilityShield  gItemIconPalette_RareCandy
+#define gItemIconPalette_Abomasite      gItemIconPalette_RareCandy
+#define gItemIconPalette_Absolite       gItemIconPalette_RareCandy
+#define gItemIconPalette_Absolite_Z     gItemIconPalette_RareCandy
+#define gItemIconPalette_AbsorbBulb     gItemIconPalette_RareCandy
+#define gItemIconPalette_AdamantOrb     gItemIconPalette_RareCandy
+#define gItemIconPalette_AdrenalineOrb  gItemIconPalette_RareCandy
+// ==========================================
+
+// Hier läuft dein originaler Code der Datei ganz normal weiter...
+
 // overworld
 extern const u8 gSignpostWindow_Gfx[];
 extern const u8 gMessageBox_Gfx[];

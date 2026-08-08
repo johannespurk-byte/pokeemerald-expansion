@@ -1051,7 +1051,8 @@ enum __attribute__((packed)) Item
     ITEM_BAXCALIBRITE = 871,
     ITEM_TATSUGIRINITE = 872,
     ITEM_GLIMMORANITE = 873,
- ITEM_INFINITE_CANDY = 874,// Ersetze 100 durch eine freie ID-Nummer am Ende der Liste
+
+
 
     // Field Move Tools
     ITEM_CUT_TOOL,
@@ -1062,8 +1063,8 @@ enum __attribute__((packed)) Item
     ITEM_ROCK_SMASH_TOOL,
     ITEM_WATERFALL_TOOL,
     ITEM_DIVE_TOOL,
-
-    ITEMS_COUNT,
+    ITEM_LEVEL_CAP_CANDY,  
+    ITEMS_COUNT,           
     ITEM_FIELD_ARROW = ITEMS_COUNT,
 };
 

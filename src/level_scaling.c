@@ -7,9 +7,11 @@
 #include "random.h"
 #include "pokemon_storage_system.h"
 #include "trainer_pools.h"
+#include "evolution_scene.h"  // <--- DIESE ZEILE HIER HINZUFÜGEN!
 #include "constants/trainers.h"
 #include "constants/pokemon.h"
 
+extern const struct EvolutionOverride gEvolutionOverrides[];
 #if B_LEVEL_SCALING_ENABLED
 
 #include "data/level_scaling_rules.h"

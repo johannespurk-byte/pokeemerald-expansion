@@ -1307,24 +1307,26 @@ static void Task_NewGameBirchSpeech_Init(u8 taskId)
     SetGpuReg(REG_OFFSET_BLDALPHA, 0);
     SetGpuReg(REG_OFFSET_BLDY, 0);
 
-    DecompressDataWithHeaderVram(sBirchSpeechShadowGfx, (void *)VRAM);
-    DecompressDataWithHeaderVram(sBirchSpeechBgMap, (void *)(BG_SCREEN_ADDR(7)));
+    DecompressDataWithHeaderVram(sBirchSpeechShadowGfx, (void*)VRAM);
+    DecompressDataWithHeaderVram(sBirchSpeechBgMap, (void*)(BG_SCREEN_ADDR(7)));
     LoadPalette(sBirchSpeechBgPals, BG_PLTT_ID(0), 2 * PLTT_SIZE_4BPP);
     LoadPalette(&sBirchSpeechBgGradientPal[8], BG_PLTT_ID(0) + 1, PLTT_SIZEOF(8));
+
+    // --- REPARATUR: HINTERGRUND AUF GOLD-GRAU UMFAERBEN ---
+    // Palette 0 steuert das Podest und den Haupt-Hintergrund
+    gPlttBufferUnfaded[BG_PLTT_ID(0) + 1] = RGB(22, 22, 22); // Dunkelgrau für den Kontrast
+    gPlttBufferUnfaded[BG_PLTT_ID(0) + 2] = RGB(26, 21, 12); // Edles Dunkelgold
+    gPlttBufferUnfaded[BG_PLTT_ID(0) + 3] = RGB(31, 26, 15); // Helles Champagner-Gold
+
+    // Palette 1 steuert den sanften Farbverlauf im Hintergrund (Gradient)
+    gPlttBufferUnfaded[BG_PLTT_ID(1) + 1] = RGB(14, 14, 14); // Tiefes Hintergrundgrau
+    gPlttBufferUnfaded[BG_PLTT_ID(1) + 2] = RGB(18, 18, 18); // Mittleres Grau
+    gPlttBufferUnfaded[BG_PLTT_ID(1) + 3] = RGB(24, 21, 15); // Schimmerndes Graugold
+    // -----------------------------------------------------
+
     ScanlineEffect_Stop();
     ResetSpriteData();
-    FreeAllSpritePalettes();
-    ResetAllPicSprites();
-    AddBirchSpeechObjects(taskId);
-    BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
-    gTasks[taskId].tBG1HOFS = 0;
-    gTasks[taskId].func = Task_NewGameBirchSpeech_WaitToShowBirch;
-    gTasks[taskId].tPlayerSpriteId = SPRITE_NONE;
-    gTasks[taskId].data[3] = 0xFF;
-    gTasks[taskId].tTimer = 0xD8;
-    PlayBGM(MUS_ROUTE122);
-    ShowBg(0);
-    ShowBg(1);
+
 }
 
 static void Task_NewGameBirchSpeech_WaitToShowBirch(u8 taskId)
@@ -1406,7 +1408,7 @@ static void Task_NewGameBirchSpeechSub_InitPokeBall(u8 taskId)
     gSprites[spriteId].invisible = FALSE;
     gSprites[spriteId].data[0] = 0;
 
-    CreatePokeballSpriteToReleaseMon(spriteId, gSprites[spriteId].oam.paletteNum, 112, 58, 0, 0, 32, PALETTES_BG, SPECIES_LOTAD);
+    CreatePokeballSpriteToReleaseMon(spriteId, gSprites[spriteId].oam.paletteNum, 112, 58, 0, 0, 32, PALETTES_BG, SPECIES_BELDUM);
     gTasks[taskId].func = Task_NewGameBirchSpeechSub_WaitForLotad;
     gTasks[sBirchSpeechMainTaskId].tTimer = 0;
 }
@@ -1840,16 +1842,42 @@ static void CB2_NewGameBirchSpeech_ReturnFromNamingScreen(void)
     SetGpuReg(REG_OFFSET_BG1VOFS, 0);
     SetGpuReg(REG_OFFSET_BG0HOFS, 0);
     SetGpuReg(REG_OFFSET_BG0VOFS, 0);
-    DmaFill16(3, 0, VRAM, VRAM_SIZE);
-    DmaFill32(3, 0, OAM, OAM_SIZE);
     DmaFill16(3, 0, PLTT, PLTT_SIZE);
     ResetPaletteFade();
-    DecompressDataWithHeaderVram(sBirchSpeechShadowGfx, (u8 *)VRAM);
-    DecompressDataWithHeaderVram(sBirchSpeechBgMap, (u8 *)(BG_SCREEN_ADDR(7)));
-    LoadPalette(sBirchSpeechBgPals, BG_PLTT_ID(0), 2 * PLTT_SIZE_4BPP);
+    DecompressDataWithHeaderVram(sBirchSpeechShadowGfx, (u8*)VRAM);
+    DecompressDataWithHeaderVram(sBirchSpeechBgMap, (u8*)(BG_SCREEN_ADDR(7)));
+            LoadPalette(sBirchSpeechBgPals, BG_PLTT_ID(0), 2 * PLTT_SIZE_4BPP);
     LoadPalette(&sBirchSpeechBgGradientPal[1], BG_PLTT_ID(0) + 1, PLTT_SIZEOF(8));
+
+    // Gold-Grau Paletten-Wechsel nach Namenseingabe
+    gPlttBufferUnfaded[BG_PLTT_ID(0) + 1] = RGB(22, 22, 22);
+    gPlttBufferUnfaded[BG_PLTT_ID(0) + 2] = RGB(26, 21, 12);
+    gPlttBufferUnfaded[BG_PLTT_ID(0) + 3] = RGB(31, 26, 15);
+    gPlttBufferUnfaded[BG_PLTT_ID(1) + 1] = RGB(14, 14, 14);
+    gPlttBufferUnfaded[BG_PLTT_ID(1) + 2] = RGB(18, 18, 18);
+    gPlttBufferUnfaded[BG_PLTT_ID(1) + 3] = RGB(24, 21, 15);
+
+    // Gold-Grau Paletten-Wechsel
+    gPlttBufferUnfaded[BG_PLTT_ID(0) + 1] = RGB(22, 22, 22); 
+    gPlttBufferUnfaded[BG_PLTT_ID(0) + 2] = RGB(26, 21, 12); 
+    gPlttBufferUnfaded[BG_PLTT_ID(0) + 3] = RGB(31, 26, 15); 
+    gPlttBufferUnfaded[BG_PLTT_ID(1) + 1] = RGB(14, 14, 14); 
+    gPlttBufferUnfaded[BG_PLTT_ID(1) + 2] = RGB(18, 18, 18); 
+    gPlttBufferUnfaded[BG_PLTT_ID(1) + 3] = RGB(24, 21, 15);
+
+    // --- REPARATUR: GOLD-GRAU AUCH BEI DER RUECKKEHR VOM NAMING-SCREEN BEHALTEN ---
+    gPlttBufferUnfaded[BG_PLTT_ID(0) + 1] = RGB(22, 22, 22); // Dunkelgrau
+    gPlttBufferUnfaded[BG_PLTT_ID(0) + 2] = RGB(26, 21, 12); // Dunkelgold
+    gPlttBufferUnfaded[BG_PLTT_ID(0) + 3] = RGB(31, 26, 15); // Champagner-Gold
+
+    gPlttBufferUnfaded[BG_PLTT_ID(1) + 1] = RGB(14, 14, 14); // Tiefgrau
+    gPlttBufferUnfaded[BG_PLTT_ID(1) + 2] = RGB(18, 18, 18); // Mittleres Grau
+    gPlttBufferUnfaded[BG_PLTT_ID(1) + 3] = RGB(24, 21, 15); // Graugold
+    // -----------------------------------------------------------------------------
+
     ResetTasks();
     taskId = CreateTask(Task_NewGameBirchSpeech_ReturnFromNamingScreenShowTextbox, 0);
+
     gTasks[taskId].tTimer = 5;
     gTasks[taskId].tBG1HOFS = -60;
     ScanlineEffect_Stop();
@@ -1910,7 +1938,7 @@ static void SpriteCB_MovePlayerDownWhileShrinking(struct Sprite *sprite)
 
 static u8 NewGameBirchSpeech_CreateLotadSprite(u8 x, u8 y)
 {
-    return CreateMonPicSprite_Affine(SPECIES_LOTAD, FALSE, 0, MON_PIC_AFFINE_FRONT, x, y, 14, TAG_NONE);
+    return CreateMonPicSprite_Affine(SPECIES_BELDUM, FALSE, 0, MON_PIC_AFFINE_FRONT, x, y, 14, TAG_NONE);
 }
 
 static void AddBirchSpeechObjects(u8 taskId)

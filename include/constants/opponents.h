@@ -862,12 +862,15 @@
 #define TRAINER_GRUNT_MAGMACAMP_1             855
 #define TRAINER_GANDALF 				   856
 #define TRAINER_BIRDO             857
+#define TRAINER_STONER             858
+#define TRAINER_BERT             859
+#define TRAINER_RINO             860
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT_EMERALD     859
-#define MAX_TRAINERS_COUNT_EMERALD 864
+#define TRAINERS_COUNT_EMERALD     900
+#define MAX_TRAINERS_COUNT_EMERALD 910
 
 #if IS_FRLG
 #define TRAINERS_COUNT                      TRAINERS_COUNT_FRLG

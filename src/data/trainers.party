@@ -17510,3 +17510,219 @@ Adamant Nature
 - Power-Up Punch
 - Bullet Punch
 - Bulldoze
+
+=== TRAINER_STONER ===
+Name: Stoner
+Class: Expert
+Pic: Expert M
+Gender: Male
+Music: Intense
+AI: Smart Trainer      
+
+
+Tyranitar (M) @ Tyranitarite
+Ability: Sand Stream
+Level: 65
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Nature: Jolly
+- Dragon Dance
+- Stone Edge
+- Crunch
+- Earthquake
+
+Lycanroc-Dusk (M) @ Lycanium Z
+Ability: Tough Claws
+Level: 65
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 252 Spe
+Nature: Jolly
+- Stone Edge
+- Accelerock
+- Psychic Fangs
+- Swords Dance
+
+Coalossal (M) @ Weakness Policy
+Ability: Steam Engine
+Level: 65
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 244 HP / 252 SpA / 12 Spe
+Nature: Modest
+Gigantamax: Yes
+- Meteor Beam
+- Heat Wave
+- Earth Power
+- Protect
+
+Garganacl (M) @ Leftovers
+Ability: Purifying Salt
+Level: 65
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Atk / 252 SpD
+Nature: Careful
+Tera Type: Rock
+- Salt Cure
+- Recover
+- Stealth Rock
+- Iron Defense
+
+Aerodactyl (M) @ Choice Band
+Ability: Rock Head
+Level: 65
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 252 Spe
+Nature: Jolly
+- Head Smash
+- Dual Wingbeat
+- Earthquake
+- U-turn
+
+Glimmora (F) @ Focus Sash
+Ability: Toxic Debris
+Level: 65
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+Nature: Timid
+- Stealth Rock
+- Power Gem
+- Sludge Wave
+- Earth Power
+
+=== TRAINER_RINO ===
+Name:Rino
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Hiker
+AI: Smart Trainer
+
+
+Swampert (M) @ Leftovers
+Ability: Torrent
+EVs: 252 HP / 128 Atk / 128 SpA
+Relaxed Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Earthquake
+- Ice Beam
+- Surf
+- Toxic
+
+Solrock @ Light Clay
+Ability: Levitate
+EVs: 252 HP / 4 Atk / 252 Def
+Impish Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Reflect
+- Light Screen
+- Rock Slide
+- Explosion
+
+Camerupt (M) @ Charcoal
+Ability: Magma Armor
+EVs: 252 HP / 252 SpA / 4 Spe
+Modest Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Eruption
+- Earth Power
+- Flamethrower
+- Toxic
+
+Whiscash (M) @ Lum Berry
+Ability: Oblivious
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Dragon Dance
+- Earthquake
+- Return
+- Surf
+
+Sudowoodo (M) @ Quick Claw
+Ability: Rock Head
+EVs: 252 HP / 252 Atk / 4 Def
+Adamant Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Double-Edge
+- Rock Slide
+- Earthquake
+- Counter
+
+Rhydon (M) @ Choice Band
+Ability: Lightning Rod
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Earthquake
+- Rock Slide
+- Megahorn
+- Brick Break
+
+=== TRAINER_BERT ===
+Name: Bert
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Hiker
+AI: Smart Trainer      
+
+
+
+Aggron (M) @ Choice Band
+Ability: Rock Head
+EVs: 252 HP / 252 Atk / 4 Spe
+Adamant Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Rock Slide
+- Earthquake
+- Focus Punch
+- Double-Edge
+
+Relicanth (M) @ Shell Bell
+Ability: Rock Head
+EVs: 252 Atk / 4 Def / 252 Spe
+Adamant Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Double-Edge
+- Rock Slide
+- Earthquake
+- Surf
+
+Flygon (M) @ Lum Berry
+Ability: Levitate
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Earthquake
+- Rock Slide
+- Flamethrower
+- Dragon Claw
+
+Cradily (M) @ Leftovers
+Ability: Suction Cups
+EVs: 252 HP / 4 Atk / 252 SpD
+Careful Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Recover
+- Toxic
+- Rock Slide
+- Barrier
+
+Donphan (M) @ Quick Claw
+Ability: Sturdy
+EVs: 252 HP / 252 Atk / 4 Def
+Adamant Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Earthquake
+- Rock Slide
+- Rapid Spin
+- Roar
+
+Sandslash (M) @ Scope Lens
+Ability: Sand Veil
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Swords Dance
+- Earthquake
+- Rock Slide
+- Slash

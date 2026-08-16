@@ -157,8 +157,17 @@ u8 AddCustomItemIconSprite(const struct SpriteTemplate *customSpriteTemplate, u1
     }
 }
 
-const void *GetItemIconPic(enum Item itemId)
+const void* GetItemIconPic(enum Item itemId)
 {
+    // ========================================================
+    // ABSOLUTER MASTER-GRAFIKFIX FÜR DAS CAP-BONBON
+    // ========================================================
+    if (itemId == ITEM_LEVEL_CAP_CANDY)
+    {
+        itemId = ITEM_RARE_CANDY; // Tauscht die ID aus, BEVOR dekomprimiert wird!
+    }
+    // ========================================================
+
     if (itemId == ITEM_LIST_END)
         return gItemIcon_ReturnToFieldArrow; // Use last icon, the "return to field" arrow
     if (itemId >= ITEMS_COUNT)
@@ -173,8 +182,17 @@ const void *GetItemIconPic(enum Item itemId)
     return gItemsInfo[itemId].iconPic;
 }
 
-const u16 *GetItemIconPalette(enum Item itemId)
+const u16* GetItemIconPalette(enum Item itemId)
 {
+    // ========================================================
+    // ABSOLUTER MASTER-PALETTENFIX FÜR DAS CAP-BONBON
+    // ========================================================
+    if (itemId == ITEM_LEVEL_CAP_CANDY)
+    {
+        itemId = ITEM_RARE_CANDY; // Tauscht die ID aus, BEVOR die Palette geladen wird!
+    }
+    // ========================================================
+
     if (itemId == ITEM_LIST_END)
         return gItemIconPalette_ReturnToFieldArrow;
     if (itemId >= ITEMS_COUNT)

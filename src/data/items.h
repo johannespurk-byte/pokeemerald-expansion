@@ -1264,21 +1264,15 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_LAVA_COOKIE] =
     {
-        .name = ITEM_NAME("Lava Cookie"),
-        .price = (I_PRICE >= GEN_7) ? 350 : 200,
-        .description = COMPOUND_STRING(
-            "A local specialty\n"
-            "that heals all\n"
-            "status problems."),
-        .pocket = POCKET_ITEMS,
-        .sortType = ITEM_TYPE_STATUS_RECOVERY,
-        .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
-        .battleUsage = EFFECT_ITEM_CURE_STATUS,
-        .effect = gItemEffect_FullHeal,
-        .flingPower = 30,
-        .iconPic = gItemIcon_LavaCookie,
-        .iconPalette = gItemIconPalette_LavaCookieAndLetter,
+        .name = (const u8*)"Cap-Bonbon", // FIX: Heißt im Spiel jetzt perfekt!
+        .description = (const u8*)"Bringt ein Pokemon\nauf das Level-Cap.",
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_NONE,
+        .pocket = POCKET_KEY_ITEMS, // Bleibt sicher in der Basis-Tasche
+        .type = ITEM_TYPE_HELD_ITEM,
+        .fieldUseFunc = ItemUseOutOfBattle_RareCandy, // Nutzt die Auswahl
+        .iconPic = gItemIcon_LavaCookie, // Absolut stabile, originale Grafik!
+        .iconPalette = gItemIconPalette_RareCandy,
     },
 
     [ITEM_OLD_GATEAU] =
@@ -15962,16 +15956,20 @@ const struct ItemInfo gItemsInfo[] =
         .iconPalette = gItemIconPalette_QuestionMark,
     },
 
-    [ITEM_INFINITE_CANDY] =
+    [ITEM_LEVEL_CAP_CANDY] =
     {
-        .name = ITEM_NAME("Cap-Bonbon"), // KORREKTUR: Nutzt das ITEM_NAME-Makro deiner Engine
+        .name = (const u8*)"Cap-Bonbon", // FIX: Heißt im Spiel perfekt!
+        .pluralName = (const u8*)"Cap-Bonbons",
         .price = 0,
-        .description = sInfiniteCandyDesc,
-        .pocket = POCKET_BERRIES,
-        .type = ITEM_USE_PARTY_MENU,    // ERGÄNZUNG: Damit öffnet sich die Teamauswahl
-        .fieldUseFunc = ItemUse_InfiniteCapCandy,
-        .iconPic = gItemIcon_QuestionMark,        // ERGÄNZUNG: Standard-Icon (Fragezeichen)
-        .iconPalette = gItemIconPalette_QuestionMark, // ERGÄNZUNG: Standard-Palette
+        .description = (const u8*)"Bringt ein Pokemon\nauf das Level-Cap.",
+        .pocket = POCKET_BERRIES,         // Versetzt in die Beeren-Tasche!
+        .sortType = ITEM_TYPE_LEVEL_UP_ITEM,
+        .type = ITEM_USE_PARTY_MENU,      // Native Menü-Logik
+        .fieldUseFunc = ItemUseOutOfBattle_RareCandy,
+        .effect = gItemEffect_RareCandy,
+        .flingPower = 30,
+        .iconPic = gItemIcon_RareCandy,   // Absolut stabile, originale Textur!
+        .iconPalette = gItemIconPalette_RareCandy,
     },
 };
 

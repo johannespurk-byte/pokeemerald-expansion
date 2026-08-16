@@ -7546,6 +7546,33 @@ void ItemUseCB_RareCandy(u8 taskId, TaskFunc task)
 
     struct Pokemon *mon = &gParties[B_TRAINER_PLAYER][gPartyMenu.slotId];
     bool8 cannotUseEffect;
+
+    // ====================================================================
+    // DEIN PERFEKTES, UNENDLICHES CAP-BONBON (IN DER BEEREN-TASCHE)
+    // ====================================================================
+    if (gSpecialVar_ItemId == ITEM_LEVEL_CAP_CANDY)
+    {
+        u8 currentLevel = GetMonData(mon, MON_DATA_LEVEL);
+        u8 maxLevel = GetCurrentLevelCap(); // Holt das native Story-Cap deiner Engine
+
+        if (currentLevel >= maxLevel)
+        {
+            PlaySE(SE_BOO); // Fehler-Sound, wenn das Pokémon am Cap ist
+            gPartyMenuUseExitCallback = FALSE;
+            DisplayPartyMenuMessage(gText_WontHaveEffect, TRUE);
+            ScheduleBgCopyTilemapToVram(0);
+            gTasks[taskId].func = task;
+            return;
+        }
+
+        SetMonData(mon, MON_DATA_LEVEL, &maxLevel);
+        CalculateMonStats(mon);
+
+        PlaySE(SE_EXP); // Level-Up Sound
+        gTasks[taskId].func = task;
+        return; // Unendlich! Bricht ab, bevor Items abgezogen werden.
+    }
+    // ==================================================================== 
     tHoldEffectParam = GetItemHoldEffectParam(gSpecialVar_ItemId);
     sInitialLevel = GetMonData(mon, MON_DATA_LEVEL);
     tItemEffect = GetItemEffectType(gSpecialVar_ItemId);

@@ -1,53 +1,64 @@
 PetalburgCity_Mart_MapScripts::
 	.byte 0
-
+	
 PetalburgCity_Mart_EventScript_Clerk::
 	lock
 	faceplayer
-	message gText_HowMayIServeYou
+	message PetalburgCity_Mart_Text_Welcome
 	waitmessage
-	goto_if_set FLAG_PETALBURG_MART_EXPANDED_ITEMS, PetalburgCity_Mart_EventScript_ExpandedItems
+	goto_if_set FLAG_BADGE01_GET, PetalburgCity_Mart_EventScript_ExpandedItems
 	pokemart PetalburgCity_Mart_Pokemart_Basic
-	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	msgbox PetalburgCity_Mart_Text_Goodbye, MSGBOX_DEFAULT
+	release
+	end
+
+PetalburgCity_Mart_EventScript_ExpandedItems::
+	pokemart PetalburgCity_Mart_Pokemart_Expanded
+	msgbox PetalburgCity_Mart_Text_Goodbye, MSGBOX_DEFAULT
 	release
 	end
 
 	.align 2
 PetalburgCity_Mart_Pokemart_Basic:
-	.2byte ITEM_POKE_BALL
-	.2byte ITEM_POTION
-	.2byte ITEM_ANTIDOTE
-	.2byte ITEM_PARALYZE_HEAL
-	.2byte ITEM_AWAKENING
-	.2byte ITEM_ESCAPE_ROPE
-	.2byte ITEM_REPEL
-	.2byte ITEM_X_SPEED
-	.2byte ITEM_X_ATTACK
-	.2byte ITEM_X_DEFENSE
-	.2byte ITEM_ORANGE_MAIL
-	pokemartlistend
-
-PetalburgCity_Mart_EventScript_ExpandedItems::
-	pokemart PetalburgCity_Mart_Pokemart_Expanded
-	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	.2byte ITEM_NORMAL_GEM
+	.2byte ITEM_FIRE_GEM
+	.2byte ITEM_WATER_GEM
+	.2byte ITEM_TM01                @ FIX: Nutzt die native TM-ID deiner Expansion
+	.2byte ITEM_TM02                @ FIX: Nutzt die native TM-ID deiner Expansion
+	.2byte ITEM_NONE
 	release
 	end
-
 	.align 2
 PetalburgCity_Mart_Pokemart_Expanded:
-	.2byte ITEM_POKE_BALL
 	.2byte ITEM_GREAT_BALL
-	.2byte ITEM_POTION
 	.2byte ITEM_SUPER_POTION
-	.2byte ITEM_ANTIDOTE
-	.2byte ITEM_PARALYZE_HEAL
-	.2byte ITEM_AWAKENING
-	.2byte ITEM_ESCAPE_ROPE
-	.2byte ITEM_REPEL
+	.2byte ITEM_TM01                @ FIX: Synchronisiert mit der Basic-Liste
+	.2byte ITEM_GRASS_GEM
+	.2byte ITEM_ELECTRIC_GEM
+	.2byte ITEM_FIGHTING_GEM
+	.2byte ITEM_FLYING_GEM
+	.2byte ITEM_POISON_GEM
+	.2byte ITEM_GROUND_GEM
+	.2byte ITEM_ROCK_GEM
+	.2byte ITEM_BUG_GEM
+	.2byte ITEM_GHOST_GEM
+	.2byte ITEM_STEEL_GEM
+	.2byte ITEM_DRAGON_GEM
+	.2byte ITEM_DARK_GEM
+	.2byte ITEM_FAIRY_GEM
+	.2byte ITEM_TM88
+	.2byte ITEM_TM04
+	.2byte ITEM_TM05
+	.2byte ITEM_TM02
+	.2byte ITEM_TM84
+	.2byte ITEM_TM54
+	.2byte ITEM_TM92	
 	.2byte ITEM_X_SPEED
 	.2byte ITEM_X_ATTACK
 	.2byte ITEM_X_DEFENSE
 	.2byte ITEM_ORANGE_MAIL
+	.2byte ITEM_NONE
+
 	pokemartlistend
 
 PetalburgCity_Mart_EventScript_Woman::
@@ -80,3 +91,8 @@ PetalburgCity_Mart_Text_TakeSomeAntidotesWithYou:
 	.string "POKéMON, it will lose HP until it faints.\l"
 	.string "Take some ANTIDOTES with you.$"
 
+PetalburgCity_Mart_Text_Welcome:
+	.string "Hi! How may I serve you today?$"
+
+PetalburgCity_Mart_Text_Goodbye:
+	.string "Please come again!$"

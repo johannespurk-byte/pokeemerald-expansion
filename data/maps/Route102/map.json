@@ -200,6 +200,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route102_EventScript_RouteSignOldale"
+    },
+    {
+      "type": "hidden_item",
+      "x": 25,
+      "y": 3,
+      "elevation": 0,
+      "item": "ITEM_WATER_GEM",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_102_Water_Gem"
     }
   ],
   "region": "REGION_HOENN"

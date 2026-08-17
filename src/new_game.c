@@ -234,6 +234,16 @@ void NewGameInitData(void)
     ResetItemFlags();
     ResetDexNav();
     ClearFollowerNPCData();
+
+    // ====================================================================
+    // ABSOLUTER MASTER-FIX: Alle Start-Items direkt in den Beutel!
+    // ====================================================================
+    AddBagItem(ITEM_MEGA_RING, 1);
+    AddBagItem(ITEM_POKEMON_BOX_LINK, 1);
+    AddBagItem(ITEM_BIG_NUGGET, 10);
+    AddBagItem(ITEM_GOOD_ROD, 1);
+    AddBagItem(ITEM_LEVEL_CAP_CANDY, 1);
+    // ====================================================================
 }
 
 static void ResetMiniGamesRecords(void)

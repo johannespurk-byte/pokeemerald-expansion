@@ -491,9 +491,12 @@
 #define FLAG_DEFEATED_REGISTEEL              0x1BD
 #define FLAG_DEFEATED_KYOGRE                 0x1BE
 #define FLAG_DEFEATED_GROUDON                0x1BF
-#define FLAG_DEFEATED_RAYQUAZA               0x1C0
-#define FLAG_DEFEATED_VOLTORB_1_NEW_MAUVILLE 0x1C1
-#define FLAG_DEFEATED_VOLTORB_2_NEW_MAUVILLE 0x1C2
+#define FLAG_DEFEATED_RAYQUAZA               0x1C0 // FIX: Wieder fehlerfrei eingefügt!
+#define FLAG_HIDE_RAYQUAZA                           0x2CC
+#define FLAG_HIDE_ROTOM_MOW                          0x2CD // Deine sichere Rotom-Flagge
+#define FLAG_FINISHED_HAUS_BATTLE                    0x2CE // Folgt logisch auf das Rotom (0x2CD)
+
+#define FLAG_DEFEATED_VOLTORB_1_NEW_MAUVILLE 0x1C1#define FLAG_DEFEATED_VOLTORB_2_NEW_MAUVILLE 0x1C2
 #define FLAG_DEFEATED_VOLTORB_3_NEW_MAUVILLE 0x1C3
 #define FLAG_DEFEATED_ELECTRODE_1_AQUA_HIDEOUT 0x1C4
 #define FLAG_DEFEATED_ELECTRODE_2_AQUA_HIDEOUT 0x1C5

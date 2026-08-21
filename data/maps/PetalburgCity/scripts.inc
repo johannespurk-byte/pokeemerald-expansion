@@ -758,3 +758,28 @@ PetalburgCity_Text_ImLookingForTalentedTrainers:
 	.string "I'm roaming the land in search of\n"
 	.string "talented TRAINERS.\p"
 	.string "I'm sorry to have taken your time.$"
+
+
+
+PetalburgCity_EventScript_RotomMowEncounter::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_ROTOM_MOW, CRY_MODE_ENCOUNTER  @ Der originale Rotom-Schrei!
+	delay 40
+	waitmoncry
+	setwildbattle SPECIES_ROTOM_MOW, 25               @ Level 25 (passt sich deinem Cap an)
+	dowildbattle
+	copyvar VAR_0x8004, VAR_RESULT
+	compare VAR_0x8004, B_OUTCOME_CAUGHT
+	goto_if_eq PetalburgCity_EventScript_RotomMowCleanUp
+	compare VAR_0x8004, B_OUTCOME_WON
+	goto_if_eq PetalburgCity_EventScript_RotomMowCleanUp
+	release
+	end
+
+PetalburgCity_EventScript_RotomMowCleanUp:
+	setflag FLAG_HIDE_ROTOM_MOW                       @ Macht das Sprite permanent unsichtbar
+	removeobject VAR_LAST_TALKED                      @ Entfernt Rotom live von der Blumenwiese
+	release
+	end

@@ -10261,6 +10261,16 @@
       "secondary_tileset": "gTileset_NavelRock",
       "border_filepath": "data/layouts/Fossil_Ruins_2/border.bin",
       "blockdata_filepath": "data/layouts/Fossil_Ruins_2/map.bin"
+    },
+    {
+      "id": "LAYOUT_LITTLEROOTCITY_ARENA",
+      "name": "LittlerootcityArena_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/LittlerootcityArena/border.bin",
+      "blockdata_filepath": "data/layouts/LittlerootcityArena/map.bin"
     }
   ]
 }

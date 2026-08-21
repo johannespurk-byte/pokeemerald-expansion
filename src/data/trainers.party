@@ -1268,14 +1268,39 @@ Gender: Male
 Music: Cool
 Items: Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Check Bad Move / Try To Faint
 
-Swellow
+Sneasel
+Level: 25
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Poison Jab
+- Brick Break
+- Fake Out
+- Swords Dance
+
+Gastrodon_West
 Level: 26
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Quick Attack
-- Agility
-- Wing Attack
+- Scald
+- Mud Shot
+- Recover
+- Yawn
+
+Scizor
+Level: 26
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Bullet Punch
+- Bug Bite
+- Dual Wingbeat
+- Swords Dance
+
+Darmanitan
+Level: 27
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Icicle Crash
+- Fire Punch
+- U-turn
+- Rock Slide
 
 === TRAINER_PARKER ===
 Name: PARKER
@@ -1285,31 +1310,40 @@ Gender: Male
 Music: Cool
 Items: Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Check Bad Move / Try To Faint
 
-Spinda
+Morgrem
+Level: 25
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Spirit Break
+- False Surrender
+- Thunder Wave
+- Swagger
+
+Zoroark
 Level: 26
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Teeter Dance
-- Dizzy Punch
-- Focus Punch
+- Night Daze
+- Extrasensory
+- Sludge Bomb
+- Nasty Plot
 
-=== TRAINER_GEORGE ===
-Name: GEORGE
-Class: Cooltrainer
-Pic: Cooltrainer M
-Gender: Male
-Music: Cool
-Items: Hyper Potion
-Double Battle: No
-AI: Basic Trainer
-
-Slakoth @ Sitrus Berry
+Lucario
 Level: 26
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Slack Off
-- Counter
-- Shadow Ball
+- Aura Sphere
+- Flash Cannon
+- Vacuum Wave
+- Calm Mind
+
+Hatterene
+Level: 27
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Psychic
+- Dazzling Gleam
+- Mystical Fire
+- Trick Room
+
 
 === TRAINER_BERKE ===
 Name: BERKE
@@ -1319,13 +1353,55 @@ Gender: Male
 Music: Cool
 Items: Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Check Bad Move / Try To Faint
 
-Vigoroth
+Grovyle
 Level: 26
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Focus Energy
+- Flame Wheel
+- Mega Drain
+- Quick Attack
+- Growth
+
+Growlithe
+Level: 26
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Rock Slide
+- Flame Wheel
+- Bite
+- Roar
+
+Houndour
+Level: 26
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Fiery Dance
+- Snarl
+- Ember
+- Smog
+
+Vulpix
+Level: 26
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Weather Ball
+- Ice Shard
+- Icy Wind
+- Ember
+
+Charmeleon
+Level: 27
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Fire Fang
+- Dragon Rage
+- Shadow Claw
 - Slash
+
+Centiskorch
+Level: 27
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Flame Wheel
+- Bug Bite
+- Coil
+- Smokescreen
 
 === TRAINER_BRAXTON ===
 Name: BRAXTON
@@ -1675,30 +1751,66 @@ Gender: Female
 Music: Cool
 Items: Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Check Bad Move / Try To Faint
 
-Wigglytuff
+Corviknight
+Level: 25
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Iron Head
+- Brave Bird
+- Bulk Up
+- Roost
+
+Skarmory
 Level: 26
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Defense Curl
-- Double Edge
-- Shadow Ball
+- Spikes
+- Whirlwind
+- Steel Wing
+- Roost
+
+Aerodactyl
+Level: 27
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Rock Slide
+- Dual Wingbeat
+- Crunch
+- Ice Punch
 
 === TRAINER_JODY ===
-Name: JODY
+Name: MISTY
 Class: Cooltrainer
 Pic: Cooltrainer F
 Gender: Female
-Music: Cool
+Music: Female
 Items: Hyper Potion
-Double Battle: No
+Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Force Setup First Turn
 
-Zangoose
-Level: 26
+Vileplume
+Level: 28
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Swords Dance
-- Slash
+- Giga Drain
+- Sludge Bomb
+- Moonblast
+- Stun Spore
+
+Tentacruel
+Level: 28
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Hydro Pump
+- Sludge Wave
+- Giga Drain
+- Acid Armor
+
+Gengar
+Level: 29
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Shadow Ball
+- Sludge Bomb
+- Dazzling Gleam
+- Nasty Plot
+
 
 === TRAINER_WENDY ===
 Name: WENDY
@@ -4942,47 +5054,42 @@ IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Body Slam
 - Attract
 
+
+
 === TRAINER_NORMAN_1 ===
-Name: NORMAN
+Name: MOM
 Class: Leader
 Pic: Leader Norman
-Gender: Male
-Music: Male
-Items: Hyper Potion / Hyper Potion
-Double Battle: No
-AI: Basic Trainer
+Gender: Female
+Music: Female
+Items: Hyper Potion
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint
 
-Spinda
-Level: 27
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Teeter Dance
-- Psybeam
-- Facade
-- Encore
+Roserade
+Level: 28
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Giga Drain
+- Sludge Bomb
+- Toxic Spikes
+- Shadow Ball
 
-Vigoroth
-Level: 27
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Slash
-- Facade
-- Encore
-- Feint Attack
+Toxtricity
+Level: 28
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Sludge Bomb
+- Overdrive
+- Hex
+- Toxic
 
-Linoone
+Venusaur
 Level: 29
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Slash
-- Belly Drum
-- Facade
-- Headbutt
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Giga Drain
+- Sludge Bomb
+- Leech Seed
+- Protect
 
-Slaking @ Sitrus Berry
-Level: 31
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Counter
-- Yawn
-- Facade
-- Feint Attack
 
 === TRAINER_WINONA_1 ===
 Name: WINONA
@@ -12139,6 +12246,51 @@ Graveler
 Level: 24
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
+
+
+=== TRAINER_GEORGE ===
+Name: GEORGE
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Cool
+Items: Hyper Potion
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Skarmory
+Level: 25
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Spikes
+- Steel Wing
+- Whirlwind
+- Roost
+
+Rotom
+Level: 26
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Overheat
+- Volt Switch
+- Thunder Wave
+- Will-O-Wisp
+
+Sableye
+Level: 26
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Knock Off
+- Shadow Ball
+- Recover
+- Calm Mind
+
+Gengar
+Level: 27
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Shadow Ball
+- Sludge Bomb
+- Giga Drain
+- Nasty Plot
+
+
 === TRAINER_TRENT_3 ===
 Name: TRENT
 Class: Hiker
@@ -17726,3 +17878,108 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Earthquake
 - Rock Slide
 - Slash
+
+
+
+=== TRAINER_MISTY ===
+Name: MISTY
+Class: Cooltrainer
+Pic: Cooltrainer F
+Gender: Female
+Music: Female
+Items: Hyper Potion
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Force Setup First Turn
+
+Vileplume
+Level: 28
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Giga Drain
+- Sludge Bomb
+- Moonblast
+- Stun Spore
+
+Tentacruel
+Level: 28
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Hydro Pump
+- Sludge Wave
+- Giga Drain
+- Acid Armor
+
+Blastoise
+Level: 29
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Water Pulse
+- Flash Cannon
+- Iron Defense
+- Shell Smash
+
+=== TRAINER_NORMAN_HAUS ===
+Name: NORMAN
+Class: Leader
+Pic: Leader Norman
+Gender: Male
+Music: Female
+Items: Hyper Potion
+Double Battle: Yes
+AI: smart trainer / Try To Faint
+
+Slaking
+Level: 30
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Return
+- Shadow Claw
+- Slack Off
+- Yawn
+
+Exploud
+Level: 29
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Boomburst
+- Extrasensory
+- Flamethrower
+- Surf
+
+Kangaskhan
+Level: 30
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Body Slam
+- Sucker Punch
+- Drain Punch
+- Crunch
+
+
+=== TRAINER_K_HAUS ===
+Name: KOGA
+Class: Leader
+Pic: Leader Norman
+Gender: Male
+Music: Female
+Items: Hyper Potion
+Double Battle: Yes
+AI: smart trainer/ Try To Faint
+
+Crobat
+Level: 29
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Cross Poison
+- Acrobatics
+- Confuse Ray
+- U-turn
+
+Weezing
+Level: 30
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Sludge Bomb
+- Thunderbolt
+- Explosion
+- Will-O-Wisp
+
+Muk
+Level: 30
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Gunk Shot
+- Fire Punch
+- Minimize
+- Shadow Sneak

@@ -2158,3 +2158,4 @@ extern const u8 gText_Girl[];
 
 
 #endif // GUARD_STRINGS_H
+extern const u8 gText_ReceivedEggFromTrainer[];

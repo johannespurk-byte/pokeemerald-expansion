@@ -548,4 +548,7 @@ enum TrainerClassID
 #define TRAINER_MON_FEMALE        2
 #define TRAINER_MON_RANDOM_GENDER 3
 
+
+
+
 #endif  // GUARD_TRAINERS_H

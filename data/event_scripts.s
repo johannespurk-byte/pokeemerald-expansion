@@ -1761,5 +1761,62 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 
 	.include "data/maps/Fossil_Ruins_2/scripts.inc"
 
+    .global Common_EventScript_SaveGame
+Common_EventScript_SaveGame::
+	.byte 0x1d
+	.4byte Common_EventScript_DoSaveGame
+	.byte 0x6c, 0x0d, 0x00, 0x00, 0x00, 0x00
+	.4byte Common_EventScript_SaveFailed
+	.byte 0x03
 
+Common_EventScript_DoSaveGame::
+	.byte 0x67
+	.4byte CustomText_SaveQuestion
+	.byte 0x05
+	.byte 0x6c, 0x0d, 0x00, 0x01, 0x00, 0x00
+	.4byte Common_EventScript_ExecuteSave
+	.byte 0x03
 
+Common_EventScript_ExecuteSave::
+	.byte 0x24
+	.2byte 0x002c
+	.byte 0x6c, 0x0d, 0x00, 0x01, 0x00, 0x00
+	.4byte Common_EventScript_SaveSuccess
+	.byte 0x03
+
+Common_EventScript_SaveSuccess::
+	.byte 0x28
+	.2byte 0x0002
+	.byte 0x67
+	.4byte CustomText_SaveConfirm
+	.byte 0x03
+	.byte 0x2a
+	.byte 0x03
+
+Common_EventScript_SaveFailed::
+	.byte 0x03
+
+    .global EventScript_RegisterProfBirch
+EventScript_RegisterProfBirch::
+	.byte 0x1c
+	.byte 0x1f
+	.byte 0x7e
+	.2byte 0x0182
+	.byte 0x67
+	.4byte CustomText_RegisterBirch
+	.byte 0x00
+	.byte 0x80
+	.byte 0x69
+	.byte 0x1d
+	.byte 0x04
+
+@ --- DEUTSCHE TEXT-STRINGS ---
+CustomText_SaveQuestion:
+	.string "Möchtest du das Spiel speichern?$"
+
+CustomText_SaveConfirm:
+	.string "{PLAYER} hat das Spiel gespeichert!$"
+
+CustomText_RegisterBirch:
+	.string "PROF. BIRK wurde im POKéNAV\n"
+	.string "registriert.$"

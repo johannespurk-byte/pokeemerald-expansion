@@ -1089,12 +1089,13 @@ static void Task_HandleMainMenuAPressed(u8 taskId)
                 return;
             }
 
+            // --- DIESEN BEREICH REPARIEREN ---
             gPlttBufferUnfaded[0] = RGB_BLACK;
             gPlttBufferFaded[0] = RGB_BLACK;
-            extern void CB2_NewGame(void);
             FreeAllWindowBuffers();
-            DestroyTask(taskId);
-            SetMainCallback2(CB2_NewGame);
+
+            // Startet das Professor Birk Intro:
+            gTasks[taskId].func = Task_NewGameBirchSpeech_Init;
             break;
         case ACTION_CONTINUE:
             gPlttBufferUnfaded[0] = RGB_BLACK;
@@ -1330,7 +1331,21 @@ static void Task_NewGameBirchSpeech_Init(u8 taskId)
     ScanlineEffect_Stop();
     ResetSpriteData();
 
+    // ==========================================
+    // ERGÄNZUNG: Fehlenden Ablauf wiederherstellen
+    // ==========================================
+    ResetTasks(); // Bereitet die Task-Struktur vor
+    AddBirchSpeechObjects(taskId); // Lädt die Sprites für Birk und Lotad
+
+    // NUTZT DIE KORREKTE FUNKTION AUS DEINER MAIN_MENU.C:
+    NewGameBirchSpeech_ClearWindow(0);
+
+    // Sagt dem Spiel, welcher Task als nächstes ausgeführt werden soll:
+    gTasks[taskId].func = Task_NewGameBirchSpeech_WaitToShowBirch;
+    // ==========================================
 }
+
+
 
 static void Task_NewGameBirchSpeech_WaitToShowBirch(u8 taskId)
 {
@@ -1354,6 +1369,7 @@ static void Task_NewGameBirchSpeech_WaitToShowBirch(u8 taskId)
     }
 }
 
+// HIER STARTET DIE KORREKTE LANGE VERSION (Die kurze darüber bitte löschen!)
 static void Task_NewGameBirchSpeech_WaitForSpriteFadeInWelcome(u8 taskId)
 {
     if (gTasks[taskId].tIsDoneFadingSprites)
@@ -1381,14 +1397,20 @@ static void Task_NewGameBirchSpeech_WaitForSpriteFadeInWelcome(u8 taskId)
 
 static void Task_NewGameBirchSpeech_ThisIsAPokemon(u8 taskId)
 {
-    if (!gPaletteFade.active && !RunTextPrintersAndIsPrinter0Active())
+    if (!RunTextPrintersAndIsPrinter0Active())
     {
-        gTasks[taskId].func = Task_NewGameBirchSpeech_MainSpeech;
         StringExpandPlaceholders(gStringVar4, gText_ThisIsAPokemon);
-        AddTextPrinterWithCallbackForMessage(TRUE, NewGameBirchSpeech_WaitForThisIsPokemonText);
-        sBirchSpeechMainTaskId = taskId;
+        NewGameBirchSpeech_ClearWindow(0);
+
+        // Nutzt den Befehl, den dein Projekt fehlerfrei kennt:
+        AddTextPrinterForMessage(TRUE);
+
+        gTasks[taskId].func = Task_NewGameBirchSpeech_MainSpeech;
     }
 }
+
+
+
 
 static void Task_NewGameBirchSpeech_MainSpeech(u8 taskId)
 {
